@@ -101,7 +101,7 @@ Modified: `CMakeLists.txt` (2 source lines), `cmake/VeyraRemotePlay.cmake` (link
 | `Ps5Kbm.cpp`, `RemotePlay.cpp`, `RemotePlaySessionSource.cpp` | MinGW-w64 `-fsyntax-only`, real include chain, FFmpeg headers, stubs for proprietary SDK headers only | 0 errors in changed code (verified the compiler reaches the code with an injected error) |
 | QML | `qmlformat` (Qt 6.4) parse of every changed/new QML file | parse OK; **not executed** (needs Qt 6.8 + Veyra modules) |
 | i18n | `python -B scripts/i18n/extract.py --check` | 3149 entries, 0 missing, 0 placeholder problems |
-| GitHub Actions `ps5-kbm-checks`: engine + tests with MSVC `/W4`, Qt 6.8.3 compile of `Ps5KbmCapture.cpp` (with moc), Linux sanitizers | `.github/workflows/ps5-kbm-checks.yml` | **not run yet**: the branch has not been pushed (repository rules require an explicit push request) |
+| GitHub Actions `ps5-kbm-checks`: engine + tests with MSVC `/W4`, Qt 6.8.3 compile of `Ps5KbmCapture.cpp` (with moc), Linux sanitizers | `.github/workflows/ps5-kbm-checks.yml` | **not run**: pushed 2026-11-20, but GitHub did not start either job ("account is locked due to a billing issue", run 44689673523). Re-run once Actions billing is resolved |
 | Full product build (MSVC, Qt 6.8.3, Chiaki stage, NGX, FFmpeg) | — | **not run**: no Windows toolchain or proprietary SDKs in this environment |
 | Existing Windows test suites (`veyra_remoteplay_*`, Qt Quick tests) | — | **not run** |
 | PS5 / GTA VI / RTX 5080 hardware validation | — | **not run** |
