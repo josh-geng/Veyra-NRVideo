@@ -16,6 +16,10 @@
 
 #140/#133/#127/#115/#99/#96/#75 保留原 head 合并，#136 纯源码采用（原 DLL/LIB 历史不进入主线）。B站/浏览器桥、Dolby Vision、韩语、300%音量、Xbox/PS5/Elgato/截图与 Linux OBS 滤镜的适配及证据见[本轮记录](PR_INTEGRATION_2026-11-18.md)。当前构建 `E:/项目/Veyra/build/codex-pr-integration-20261118/app`，私有测试程序位于同任务 tests/app；GitHub 整合结果记在 WORKLOG/FINAL.json。旧主线整合回执仍保留作前序证据。
 
+## PS5 键鼠控制（分支，未合 main）
+
+2026-11-20 在 `claude/fervent-lamport-xa6ms2` 加入键盘鼠标→虚拟 DualSense（默认关闭）。只完成可移植部分的 Linux 测试与 Windows 代码的类型检查，尚无 MSVC 产品构建与实机验证。见 [架构](ps5-kbm/ARCHITECTURE.md)、[使用指南](ps5-kbm/USER_GUIDE.md)、[工程报告](ps5-kbm/ENGINEERING_REPORT.md)。
+
 ## 虚拟摄像机
 
 - 录制旁启用，在直播软件中选择Veyra Virtual Camera；输出处理后的完整画面，尺寸独立于软件窗口。

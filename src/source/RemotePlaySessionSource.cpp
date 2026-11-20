@@ -132,6 +132,10 @@ void RemotePlaySessionSource::run(std::stop_token stop, RemotePlayConnectDesc de
             } else log::error("remoteplay-audio","output initialization failed; video remains available");
             auto lastFrame=std::chrono::steady_clock::now();
             auto nextController=lastFrame;
+            // Same reason as the controller-only branch: without a raised timer resolution
+            // a 1 ms sleep can last a whole 15.6 ms tick, which would stretch the 4 ms
+            // controller cadence to the video frame interval while no frame is ready.
+            const auto idleTimer=std::unique_ptr<void,decltype(&CloseHandle)>(CreateWaitableTimerExW(nullptr,nullptr,CREATE_WAITABLE_TIMER_HIGH_RESOLUTION,TIMER_ALL_ACCESS),&CloseHandle);
             auto rateStart=lastFrame;uint64_t previousReceived=receivedBase,previousDecoded=0;
             {std::lock_guard lock(mutex_);previousDecoded=rates_.decoded;}
             auto nextNativeLog=lastFrame;
@@ -209,7 +213,11 @@ void RemotePlaySessionSource::run(std::stop_token stop, RemotePlayConnectDesc de
                         recovery_.message=snapshot.state==remoteplay::SessionState::LoginPinRequired?L"等待 PS5 登录 PIN 超时，请重新连接。":native.startupRetryAllowed?L"PS5 仍被串流会话占用，请结束其他串流或稍后重试；无需重新配对。":!native.automaticRetryAllowed?L"PS5 已结束或拒绝串流，请检查主机状态后重新连接。":L"PS5 串流未恢复，请检查主机及网络后点击连接；无需重新配对。";
                         recovery_.message+=std::format(L"（终止码 {} / 错误 {}）",native.lastQuitReason,snapshot.errorCode);break;
                     }
-                    std::this_thread::sleep_for(std::chrono::milliseconds(1));
+                    // Wait at most 1 ms (decode polling unchanged), never past the next controller submission.
+                    const auto wait=desc.request.viewOnly?int64_t(1000):std::clamp<int64_t>(std::chrono::duration_cast<std::chrono::microseconds>(nextController-std::chrono::steady_clock::now()).count(),100,1000);
+                    LARGE_INTEGER due;due.QuadPart=-wait*10;
+                    if(idleTimer&&SetWaitableTimer(idleTimer.get(),&due,0,nullptr,nullptr,FALSE))WaitForSingleObject(idleTimer.get(),20);
+                    else std::this_thread::sleep_for(std::chrono::milliseconds(1));
                 }
             }
         }

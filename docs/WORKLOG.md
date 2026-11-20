@@ -1,5 +1,13 @@
 # 当前工作日志
 
+## 2026-11-20 PS5 键鼠控制（Claude，分支 claude/fervent-lamport-xa6ms2，未合 main）
+
+用户要求为 PS5 远程游玩加入键盘鼠标→虚拟 DualSense，并面向 GTA 类游戏提供方案、调校与校准。实现：可移植引擎 `src/remoteplay/kbm`（鼠标→摇杆速度估计与回报率无关、DPI 归一化、ADS/精确倍率、反死区、线性/幂/校准表曲线、上限、默认零平滑、可选加速与有界转身保留、轮盘定位；键盘映射、按住/切换/连发、组合键、滚轮脉冲、渐进转向；四套 GTA 风格方案 F1–F4；混合/仅键鼠/仅手柄；引导式校准）、Win32 原始输入线程 `Ps5KbmCapture`、会话 owner 在每次 4 ms 提交前采样、桥接 `bridge/Ps5Kbm.cpp`、`Ps5KbmDialog.qml`、串流方案预设、五语言文案。另将串流模式 owner 空闲等待由 `sleep_for(1ms)` 改为高精度可等待计时器（同文件控制模式已记录 1 ms 可能拉长到 15.6 ms）。默认键位按 GTA V PlayStation 布局假设，未核实 GTA VI。功能默认关闭；关闭时手柄状态原样透传（单元测试覆盖）。
+
+验证（Linux 容器 Xeon 2.1 GHz）：`tests/kbm` 47/47，GCC 13 Debug ASan+UBSan、Release（-Wall -Wextra -Wconversion 0 警告）、Clang 18、TSan 并发用例均通过；compose 平均 0.75–0.82 µs、最坏 16–41 µs（8 kHz 鼠标、4 ms 提交）。MinGW-w64 交叉编译引擎与测试通过但未执行（容器 Wine 无法运行任何程序）；`Ps5KbmCapture.cpp`、`bridge/Ps5Kbm.cpp`、`bridge/RemotePlay.cpp`、`RemotePlaySessionSource.cpp` 以 MinGW 头文件 `-fsyntax-only` 0 错误（注入错误确认编译器到达代码）；QML 由 Qt 6.4 `qmlformat` 解析通过；`extract.py --check` 3149 条、缺失 0、占位符问题 0。新增 GitHub Actions `ps5-kbm-checks`（MSVC+Qt 6.8.3 编译引擎/原始输入垫片并运行测试，Linux 消毒器）。
+
+未验证：MSVC 完整产品构建、既有 Windows 测试与新 `tst_ps5_kbm.qml`、PS5/GTA VI/RTX 5080 实机、端到端延迟。报告与清单：[工程报告](ps5-kbm/ENGINEERING_REPORT.md)、[测量方法与实机清单](ps5-kbm/MEASUREMENT.md)。
+
 ## 2026-11-18 #152 60→30 在游戏不足30帧时送入重复画面（Claude，分支 claude/issue152-halfrate-20261118，未合 main）
 
 用户反馈PS5（2K60 NV12，VFG 2X中）掉帧时60→30剔除后31–32、补帧后61–63且卡顿。原因：`CaptureHalfRate`固定每两帧取一帧，游戏低于30帧时同一画面出现3次以上，网格会把同一画面保留两次（VFG在两张相同图之间插帧=顿挫）；同时2026-10-27的相位修正被反复触发，额外收入相邻帧导致超过30。修改：到期样本若与上次保留的画面编号相同，且距该保留不足`kHitchSlots`=5个采集周期（与ContentDedup 30帧节拍的卡顿窗口一致），则跳过并等下一张新画面，网格从新画面重新起算；超过窗口按静止画面在网格上保持（原行为）。保留原始PTS，帧间50ms按实际跨度插帧，不补帧凑30。无画面编号时（压缩采集等）行为不变。日志`capture-rate`增加repeatsSkipped/repeatsHeld。设置说明及四种译文同步。

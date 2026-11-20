@@ -1,0 +1,72 @@
+name: PS5 keyboard/mouse engine checks
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/ps5-kbm-checks.yml'
+      - 'cmake/VeyraKbm.cmake'
+      - 'include/veyra/remoteplay/kbm/**'
+      - 'src/remoteplay/kbm/**'
+      - 'include/veyra/ui/Ps5KbmCapture.h'
+      - 'src/ui/Ps5KbmCapture.cpp'
+      - 'tests/kbm/**'
+      - 'i18n/catalog.json'
+  push:
+    branches: ['claude/**']
+    paths:
+      - '.github/workflows/ps5-kbm-checks.yml'
+      - 'cmake/VeyraKbm.cmake'
+      - 'include/veyra/remoteplay/kbm/**'
+      - 'src/remoteplay/kbm/**'
+      - 'include/veyra/ui/Ps5KbmCapture.h'
+      - 'src/ui/Ps5KbmCapture.cpp'
+      - 'tests/kbm/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ps5-kbm-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  linux-sanitizers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+        with:
+          persist-credentials: false
+      - name: Configure (ASan + UBSan)
+        run: cmake -S tests/kbm -B out/asan -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS="-fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all"
+      - name: Build
+        run: cmake --build out/asan --parallel 2
+      - name: Test
+        run: ctest --test-dir out/asan --output-on-failure --timeout 120
+      - name: Thread sanitizer (concurrency test)
+        run: |
+          cmake -S tests/kbm -B out/tsan -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_CXX_FLAGS="-fsanitize=thread"
+          cmake --build out/tsan --parallel 2
+          out/tsan/veyra_kbm_tests concurrent_producer_consumer
+      - name: Check translations
+        run: python3 -X utf8 -B scripts/i18n/extract.py --check
+
+  windows-msvc:
+    runs-on: windows-2022
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+        with:
+          persist-credentials: false
+      - uses: jurplel/install-qt-action@d325aaf2a8baeeda41ad0b5d39f84a6af9bcf005 # v4.3.0
+        with:
+          version: '6.8.3'
+          arch: 'win64_msvc2022_64'
+          cache: true
+      - name: Configure engine tests and the raw-input shim compile check
+        run: cmake -S tests/kbm -B out/kbm -G "Visual Studio 17 2022" -A x64 -DVEYRA_KBM_CHECK_WIN32_SHIM=ON
+      - name: Build (MSVC /W4)
+        run: cmake --build out/kbm --config Release --parallel 2
+      - name: Run engine tests
+        run: ctest --test-dir out/kbm -C Release --output-on-failure --timeout 120

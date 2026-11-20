@@ -3897,6 +3897,14 @@
    "ko": "스트리밍 크기 변경 전에 대기 중인 작업을 완료하지 못했습니다."
   },
   {
+   "zh": "串流方案",
+   "src": "qml/Ps5SourceDialog.qml",
+   "zh-TW": "串流方案",
+   "en": "Stream preset",
+   "ja": "ストリーム設定",
+   "ko": "스트리밍 프리셋"
+  },
+  {
    "zh": "串流设置（只影响串流本身，按主机保存）",
    "src": "qml/PcSourceDialog.qml",
    "zh-TW": "串流設定（只影響串流本身，按主機儲存）",
@@ -4583,6 +4591,14 @@
    "en": "Low-latency order, preview only, all layers in sync",
    "ja": "低遅延の順序、プレビューのみ、全層同期",
    "ko": "저지연 처리 순서 · 미리보기 전용 · 모든 레이어에 적용"
+  },
+  {
+   "zh": "低延迟：H.264 + 硬件解码 + 20 Mbps（Wi-Fi 上占用更少空口时间）；画质：H.265 50 Mbps。均为未经实测的起点，PS5 不保证达到码率",
+   "src": "qml/Ps5SourceDialog.qml",
+   "zh-TW": "低延遲：H.264 + 硬體解碼 + 20 Mbps（Wi-Fi 上佔用更少空口時間）；畫質：H.265 50 Mbps。均為未經實測的起點，PS5 不保證達到位元率",
+   "en": "Low latency: H.264 + hardware decode + 20 Mbps (less airtime on Wi-Fi); quality: H.265 50 Mbps. Unmeasured starting points; the PS5 does not guarantee the bitrate",
+   "ja": "低遅延：H.264 + ハードウェアデコード + 20 Mbps（Wi-Fi の占有時間が少ない）。画質：H.265 50 Mbps。いずれも未計測の出発点で、PS5 はビットレートを保証しません",
+   "ko": "저지연: H.264 + 하드웨어 디코드 + 20 Mbps(Wi-Fi 점유 시간이 적음). 화질: H.265 50 Mbps. 모두 실측하지 않은 출발점이며 PS5는 비트레이트를 보장하지 않습니다"
   },
   {
    "zh": "低频时域重建",
@@ -16971,6 +16987,14 @@
    "en": "Quality",
    "ja": "画質",
    "ko": "품질"
+  },
+  {
+   "zh": "画质优先",
+   "src": "qml/Ps5SourceDialog.qml",
+   "zh-TW": "畫質優先",
+   "en": "Quality first",
+   "ja": "画質優先",
+   "ko": "화질 우선"
   },
   {
    "zh": "画面",

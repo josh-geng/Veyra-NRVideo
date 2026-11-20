@@ -41,6 +41,18 @@ py -3.11 -X utf8 -B -I scripts/acceptance/build-recording-handoff.py --task code
 
 当前main构建仍是本地整合测试版，版本2.1.9。本轮已授权源码整合到 GitHub main；没有新 Release 或改写已发布下载资产授权。用户配置、运行组件与BGM分发边界按AGENTS及实际manifest执行。
 
+## PS5 键鼠引擎（任意平台）
+
+`src/remoteplay/kbm` 不依赖 Win32/Qt/Chiaki，可单独构建测试（产品构建经 `cmake/VeyraRemotePlay.cmake` 链接同一库，并注册 `ctest -R remoteplay-kbm`）：
+
+```
+cmake -S tests/kbm -B <任务build>/kbm -G Ninja
+cmake --build <任务build>/kbm
+ctest --test-dir <任务build>/kbm --output-on-failure
+```
+
+Windows 上加 `-DVEYRA_KBM_CHECK_WIN32_SHIM=ON`（需 Qt 6）同时编译原始输入垫片。`veyra_remoteplay_kbm` 暂未开 `/WX`，首次 MSVC 构建无警告后再开启。
+
 ## 新增外部依赖（#136 / #133）
 
 完整 Windows 构建默认启用 libdovi，必须提供 `VEYRA_LIBDOVI_ROOT`（include/libdovi、lib、bin、MIT LICENSE）；不得把贡献 PR 的 DLL/LIB 合进源码。固定来源 quietvoid/dovi_tool `d1abe0e27ff2c7ab3339614d06db9f8a058af6b2`，libdovi 3.4.0，Rust 1.88+；用其 cbindgen.toml 生成匹配头，`cargo rustc --manifest-path dolby_vision/Cargo.toml --lib --release --locked --features capi --crate-type cdylib -- -Cpanic=abort`。DLL 与 MIT LICENSE 跟随用户包，SDK/导入库不打包。仅精简开发构建可显式关闭 VEYRA_ENABLE_LIBDOVI，不能把关闭版当完整交付。

@@ -82,6 +82,36 @@ DialogLayer {
 
     DialogSection { text: qsTr("串流（重连生效）") }
     DialogGroup {
+        // Presets only combine the existing options below; buffering and queue limits are
+        // unchanged. They are reasoned starting points, not measured latency results.
+        VRow {
+            id: streamPreset
+            label: qsTr("串流方案")
+            hint: qsTr("低延迟：H.264 + 硬件解码 + 20 Mbps（Wi-Fi 上占用更少空口时间）；画质：H.265 50 Mbps。均为未经实测的起点，PS5 不保证达到码率")
+            readonly property var presets: ({
+                latency: { quality: 3, codec: 0, bitrate: 3, decode: 2 },
+                balanced: { quality: 3, codec: 1, bitrate: 3, decode: 0 },
+                quality: { quality: 3, codec: 1, bitrate: 5, decode: 0 } })
+            readonly property string current: {
+                const v = veyra.ps5
+                for (const k in presets) {
+                    const p = presets[k]
+                    if ((v.quality || 0) === p.quality && (v.codec || 0) === p.codec && (v.bitrate || 0) === p.bitrate && (v.decode || 0) === p.decode) return k
+                }
+                return "custom"
+            }
+            VSeg {
+                objectName: "ps5-stream-preset"
+                options: [{ id: "latency", label: qsTr("低延迟") }, { id: "balanced", label: qsTr("均衡") },
+                          { id: "quality", label: qsTr("画质优先") }, { id: "custom", label: qsTr("自定义") }]
+                current: streamPreset.current
+                onPicked: id => {
+                    const p = streamPreset.presets[id]
+                    if (!p) return
+                    for (const k in p) veyra.ps5Set(k, p[k])
+                }
+            }
+        }
         VRow {
             label: qsTr("分辨率与帧率")
             VSelect { implicitWidth: 170; value: ps5Dialog.qualities[veyra.ps5.quality || 0].label; options: ps5Dialog.qualities; onPicked: id => veyra.ps5Set("quality", Number(id)) }
