@@ -432,6 +432,8 @@ bool QmlPlayerBridge::ps5Connect() {
     saved->host = host; saved->video = ps5Video(i.ps5Form); saved->viewOnly = i.ps5Form.value("viewOnly").toBool();
     if (!remoteplay::saveProfile(path, *saved)) { i.ps5Status = tr("保存连接设置失败，请检查目录权限。"); emit ps5Changed(); return false; }
     source::RemotePlayConnectDesc desc; desc.request = std::move(*saved);
+    // Keyboard/mouse engine rides along; it passes the pad through until the user captures.
+    ps5KbmLoad(); desc.keyboardMouse = i.kbm;
     const int decode = std::clamp(i.ps5Form.value("decode").toInt(), 0, 2);
     desc.decodeMode = static_cast<source::RemotePlayConnectDesc::DecodeMode>(decode);
     desc.highQualitySampling = i.ps5Form.value("sampling").toInt() == 1;
@@ -680,6 +682,7 @@ void QmlPlayerBridge::startPs5Control(bool restart) {
     keepalive.width = 1280; keepalive.height = 720; keepalive.fps = 30; keepalive.bitrateKbps = 5000; keepalive.codec = remoteplay::Codec::H264;
     desc.request.video = keepalive;
     veyra::log::info("remoteplay-control", std::format("start host={} restart={} background={}", desc.request.host, restart, i.prefBool("ps5ControlBackground", false)));
+    ps5KbmLoad(); desc.keyboardMouse = i.kbm; // capture card picture + keyboard/mouse works too
     i.ps5ControlProfile = profile;
     i.ps5ControlNoticed.clear();
     i.ps5ControlNoPair = false;

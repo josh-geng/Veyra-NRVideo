@@ -1,6 +1,7 @@
 #include "veyra/source/RemotePlaySessionSource.h"
 #include "veyra/Log.h"
 #include "veyra/remoteplay/StreamRecovery.h"
+#include "veyra/remoteplay/kbm/KbmEngine.h"
 #include <cmath>
 #include <format>
 #include <algorithm>
@@ -64,6 +65,8 @@ void RemotePlaySessionSource::run(std::stop_token stop, RemotePlayConnectDesc de
                 if(now>=nextController) {
                     remoteplay::ControllerState controller;
                     {std::lock_guard lock(mutex_);controller=takeControllerLocked(remoteplay::monotonic100ns());}
+                    // Keyboard/mouse is sampled here, at submission time, not at a UI tick.
+                    if(desc.keyboardMouse)controller=desc.keyboardMouse->compose(controller,remoteplay::monotonic100ns());
                     const auto r=source.submitController(controller);
                     if(!r.ok)log::warn("remoteplay",std::format("{} code={}",r.operation,r.code));
                     nextController=now+std::chrono::milliseconds(4);
@@ -147,6 +150,8 @@ void RemotePlaySessionSource::run(std::stop_token stop, RemotePlayConnectDesc de
                 if(!desc.request.viewOnly&&now>=nextController) {
                     remoteplay::ControllerState controller;
                     {std::lock_guard lock(mutex_);controller=takeControllerLocked(remoteplay::monotonic100ns());}
+                    // Keyboard/mouse is sampled here, at submission time, not at a UI tick.
+                    if(desc.keyboardMouse)controller=desc.keyboardMouse->compose(controller,remoteplay::monotonic100ns());
                     const auto r=source.submitController(controller);
                     if(!r.ok)log::warn("remoteplay",std::format("{} code={}",r.operation,r.code));
                     nextController=now+std::chrono::milliseconds(4);

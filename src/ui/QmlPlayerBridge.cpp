@@ -455,6 +455,7 @@ QmlPlayerBridge::QmlPlayerBridge(engine::EngineController& engine, std::filesyst
         tickCapture();
         tickPs5();
         tickMoonlight();
+        tickPs5Kbm();
         tickXbox();
         // Geometry uses the source DAR and the same transform as mouse/compare.
         if (impl_->snapshot.running && impl_->videoWindow) {

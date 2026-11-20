@@ -273,6 +273,14 @@
    "ko": " · 복원"
   },
   {
+   "zh": " · 推杆 %1 已到顶",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": " · 推杆 %1 已到頂",
+   "en": " · stick tops out at %1",
+   "ja": " · スティック %1 で上限",
+   "ko": " · 스틱 %1에서 최대"
+  },
+  {
    "zh": " · 旁路",
    "src": "qml/ColourPanel.qml",
    "zh-TW": " · 旁路",
@@ -311,6 +319,14 @@
    "en": " · calibrating",
    "ja": " · 補正中",
    "ko": " · 교정 중"
+  },
+  {
+   "zh": " · 游戏有随时间加速，无法消除",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": " · 遊戲有隨時間加速，無法消除",
+   "en": " · the game ramps turn speed over time; this cannot be removed",
+   "ja": " · ゲームが時間とともに旋回を加速します（除去不可）",
+   "ko": " · 게임이 시간에 따라 회전을 가속합니다(제거 불가)"
   },
   {
    "zh": " · 直播软件请求 %1 帧/秒",
@@ -665,6 +681,14 @@
    "ko": "+ 뷰티 레이어 추가"
   },
   {
+   "zh": "+组合",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "+組合",
+   "en": "+Modifier",
+   "ja": "+修飾キー",
+   "ko": "+조합키"
+  },
+  {
    "zh": "0 = 不做高光滚降",
    "src": "qml/ProDisplayPanel.qml",
    "zh-TW": "0 = 不做高光滾降",
@@ -681,12 +705,36 @@
    "ko": "0 = 제한 없음"
   },
   {
+   "zh": "0 = 关闭。可选，快速移动时放大",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "0 = 關閉。可選，快速移動時放大",
+   "en": "0 = off. Optional; amplifies fast movement",
+   "ja": "0 = オフ。任意。速い動きを増幅",
+   "ko": "0 = 끔. 선택 사항, 빠른 움직임을 증폭"
+  },
+  {
+   "zh": "0 = 完全不平滑（默认）。增加会让停止变慢",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "0 = 完全不平滑（預設）。增加會讓停止變慢",
+   "en": "0 = no smoothing at all (default). Higher values make stopping slower",
+   "ja": "0 = 平滑化なし（既定）。上げると停止が遅くなります",
+   "ko": "0 = 스무딩 없음(기본값). 올리면 정지가 느려집니다"
+  },
+  {
    "zh": "0 = 沿用所选格式；设备返回其他帧率会报错，不在软件中偷偷丢帧",
    "src": "qml/CaptureSourceDialog.qml",
    "zh-TW": "0 = 沿用所選格式；裝置返回其他幀率會報錯，不在軟體中偷偷丟幀",
    "en": "0 = use the selected format; a device that returns another frame rate reports an error instead of frames being dropped silently",
    "ja": "0 = 選択したフォーマットのまま。デバイスが別のフレームレートを返した場合はエラーになり、黙ってフレームを捨てることはしません",
    "ko": "0: 선택한 형식 사용. 장치가 다른 프레임률을 보내면 임의로 프레임을 버리지 않고 오류를 알립니다."
+  },
+  {
+   "zh": "0 = 立即满推。驾驶方案用于渐进转向",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "0 = 立即滿推。駕駛方案用於漸進轉向",
+   "en": "0 = full deflection at once. The Driving profile uses it for gradual steering",
+   "ja": "0 = 即座に最大。運転プロファイルで段階的なステアリングに使用",
+   "ko": "0 = 즉시 최대. 운전 프로필에서 점진적 조향에 사용"
   },
   {
    "zh": "0 = 自动使用系统报告值",
@@ -729,12 +777,28 @@
    "ko": "0%에서는 밝기 곡선을 적용하지 않습니다. 최대 밝기 보호와 메타데이터 설정은 별도로 적용됩니다."
   },
   {
+   "zh": "1 · 死区",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "1 · 死區",
+   "en": "1 · Dead zone",
+   "ja": "1 · デッドゾーン",
+   "ko": "1 · 데드존"
+  },
+  {
    "zh": "1 分钟",
    "src": "qml/SettingsPage.qml",
    "zh-TW": "1 分鐘",
    "en": "1 min",
    "ja": "1 分",
    "ko": "1분"
+  },
+  {
+   "zh": "1.0：手移动约 5 英寸/秒达到游戏最大转速",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "1.0：手移動約 5 英寸/秒達到遊戲最大轉速",
+   "en": "1.0: about 5 inches/s of hand movement reaches the game’s maximum turn rate",
+   "ja": "1.0：手の移動約 5 インチ/秒でゲームの最大旋回速度",
+   "ko": "1.0: 손 이동 약 5인치/초에서 게임 최대 회전 속도"
   },
   {
    "zh": "10 分钟",
@@ -767,6 +831,14 @@
    "en": "15 s",
    "ja": "15 秒",
    "ko": "15초"
+  },
+  {
+   "zh": "2 · 转速",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "2 · 轉速",
+   "en": "2 · Turn rate",
+   "ja": "2 · 旋回速度",
+   "ko": "2 · 회전 속도"
   },
   {
    "zh": "2 分钟",
@@ -807,6 +879,14 @@
    "en": "2X is the native path; 3X / 4X are experimental unlocks. See diagnostics for failures",
    "ja": "2X はネイティブ動作、3X / 4X は実験的なアンロックです。失敗の理由は診断を参照してください",
    "ko": "기본은 2배입니다. 3·4배 제한 해제는 실험 기능입니다. 오류 진단을 확인하세요."
+  },
+  {
+   "zh": "3 · 线性检查",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "3 · 線性檢查",
+   "en": "3 · Linearity check",
+   "ja": "3 · 直線性チェック",
+   "ko": "3 · 선형성 확인"
   },
   {
    "zh": "30 秒",
@@ -1721,6 +1801,14 @@
    "ko": "K는 기존 모델, M과 L은 DLSS 4.5 모델입니다. L은 낮은 입력 해상도에 맞춰져 있습니다. 화질과 처리 시간은 원본 영상에 따라 달라집니다."
   },
   {
+   "zh": "L2 时启用瞄准倍率",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "L2 時啟用瞄準倍率",
+   "en": "Aim multiplier while L2 is held",
+   "ja": "L2 中に照準倍率を適用",
+   "ko": "L2 누를 때 조준 배율 적용"
+  },
+  {
    "zh": "LUT 不可用：%1",
    "src": "src/ui/bridge/Colour.cpp",
    "zh-TW": "LUT 不可用：%1",
@@ -2249,6 +2337,14 @@
    "ko": "PS5가 스트림을 종료했거나 거부했습니다. 콘솔을 확인하고 다시 연결하십시오."
   },
   {
+   "zh": "PS5 已连接；关闭面板并点击画面开始",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "PS5 已連線；關閉面板並點選畫面開始",
+   "en": "PS5 connected; close this panel and click the picture to start",
+   "ja": "PS5 接続済み。パネルを閉じて映像をクリックすると開始",
+   "ko": "PS5 연결됨. 패널을 닫고 화면을 클릭하면 시작"
+  },
+  {
    "zh": "PS5 手柄",
    "src": "qml/HomePage.qml",
    "zh-TW": "PS5 手把",
@@ -2423,6 +2519,14 @@
    "en": "PS5 connection failed; see diagnostics",
    "ja": "PS5 の接続に失敗しました。診断を確認してください",
    "ko": "PS5 연결에 실패했습니다. 진단 보기"
+  },
+  {
+   "zh": "PS5 键鼠控制",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "PS5 鍵鼠控制",
+   "en": "PS5 keyboard & mouse",
+   "ja": "PS5 キーボード＆マウス",
+   "ko": "PS5 키보드·마우스"
   },
   {
    "zh": "PSN 账号",
@@ -2735,6 +2839,14 @@
    "en": "Veyra is free and open source, and it runs on your support",
    "ja": "Veyra は無料のオープンソース。皆さんの支援が支えです",
    "ko": "Veyra는 무료 오픈 소스 프로그램입니다. 여러분의 후원이 개발을 이어가는 힘이 됩니다."
+  },
+  {
+   "zh": "Veyra 慢慢推动右摇杆，你在视角开始转动的瞬间标记",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "Veyra 慢慢推動右搖桿，你在視角開始轉動的瞬間標記",
+   "en": "Veyra slowly pushes the right stick; mark the moment the camera starts to turn",
+   "ja": "Veyra が右スティックをゆっくり倒します。視点が回り始めた瞬間にマーク",
+   "ko": "Veyra가 오른쪽 스틱을 천천히 밉니다. 시점이 돌기 시작하는 순간 표시하세요"
   },
   {
    "zh": "Veyra 本地诊断（复制前脱敏预览；不会上传）\n",
@@ -3505,6 +3617,22 @@
    "ko": "유효한 .vpcolor 파일이 아닙니다."
   },
   {
+   "zh": "不是有效的键鼠方案：%1",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "不是有效的鍵鼠方案：%1",
+   "en": "Not a valid keyboard/mouse profile: %1",
+   "ja": "有効なキーボード／マウス設定ではありません：%1",
+   "ko": "유효한 키보드·마우스 프로필이 아닙니다: %1"
+  },
+  {
+   "zh": "不用",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "不用",
+   "en": "Unused",
+   "ja": "使わない",
+   "ko": "사용 안 함"
+  },
+  {
    "zh": "不确定就选「自动」。采集 HDR：采集格式选 P010，这里选「HDR · PQ」（游戏机、显卡的 HDR10 都是 PQ）。「HDR · HLG」用于广播信号。「SDR · 709」是普通画面。变更需重连",
    "src": "qml/CaptureSourceDialog.qml",
    "zh-TW": "不確定就選「自動」。擷取 HDR：擷取格式選 P010，這裡選「HDR · PQ」（遊戲機、顯示卡的 HDR10 都是 PQ）。「HDR · HLG」用於廣播信號。「SDR · 709」是普通畫面。變更需重連",
@@ -4241,6 +4369,14 @@
    "ko": "게임 모드에서만 키 입력을 받습니다. Ctrl·Alt·Shift 조합도 사용할 수 있습니다."
   },
   {
+   "zh": "仅手柄",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "僅手把",
+   "en": "Controller only",
+   "ja": "コントローラーのみ",
+   "ko": "컨트롤러만"
+  },
+  {
    "zh": "仅接受驱动尺寸范围与步进支持的值；连接时核对实际格式",
    "src": "qml/CaptureSourceDialog.qml",
    "zh-TW": "僅接受驅動尺寸範圍與步進支援的值；連線時核對實際格式",
@@ -4303,6 +4439,14 @@
    "en": "Captures video only; software UI with simpler shadows and blur",
    "ja": "映像のみキャプチャ。UI はソフトウェア描画になり、一部の影・ぼかしを簡略化",
    "ko": "영상만 캡처합니다. 화면은 소프트웨어로 그려 그림자와 흐림 효과가 단순해집니다."
+  },
+  {
+   "zh": "仅键鼠",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "僅鍵鼠",
+   "en": "Keyboard/mouse only",
+   "ja": "キーボード／マウスのみ",
+   "ko": "키보드·마우스만"
   },
   {
    "zh": "从列表移除，不删除文件",
@@ -4479,6 +4623,14 @@
    "en": "e.g. Night gaming",
    "ja": "例：夜のゲーム",
    "ko": "야간 장면이 많은 게임 등"
+  },
+  {
+   "zh": "依次测 0.3 … 1.0 几个推杆量；已测 %1 个",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "依次測 0.3 … 1.0 幾個推杆量；已測 %1 個",
+   "en": "Measure several deflections from 0.3 to 1.0; %1 measured",
+   "ja": "0.3〜1.0 のいくつかの倒し量を順に測定。測定済み %1",
+   "ko": "0.3~1.0 여러 기울기를 차례로 측정. 측정 %1개"
   },
   {
    "zh": "保存",
@@ -4809,6 +4961,14 @@
    "ko": "1차 초해상도 결과를 줄인 뒤 초해상도를 한 번 더 적용합니다. 두 번 처리하므로 GPU 시간과 메모리가 더 필요합니다."
   },
   {
+   "zh": "先打开「键鼠控制」开关",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "先開啟「鍵鼠控制」開關",
+   "en": "Turn on “Keyboard & mouse” first",
+   "ja": "先に「キーボード＆マウス」をオンにしてください",
+   "ko": "먼저 ‘키보드·마우스’를 켜세요"
+  },
+  {
    "zh": "先整理文件，再按顺序导出",
    "src": "qml/ExportPage.qml",
    "zh-TW": "先整理檔案，再按順序匯出",
@@ -4823,6 +4983,14 @@
    "en": "Disconnect capture before configuring the driver",
    "ja": "キャプチャを切断してからドライバーを設定",
    "ko": "드라이버 설정 전에 캡처 연결을 끊으세요."
+  },
+  {
+   "zh": "先连接 PS5（串流或手柄控制），在游戏里站定后再校准",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "先連線 PS5（串流或手把控制），在遊戲裡站定後再校準",
+   "en": "Connect the PS5 (stream or controller-only) and stand still in the game before calibrating",
+   "ja": "PS5 に接続（ストリームまたはコントローラー操作）し、ゲーム内で立ち止まってから校正",
+   "ko": "PS5에 연결(스트리밍 또는 컨트롤러 제어)하고 게임에서 멈춰 선 뒤 보정하세요"
   },
   {
    "zh": "先选择一个捕获目标",
@@ -4977,6 +5145,14 @@
    "ko": "효과 제외는 영상 보정 다음, 프레임 생성 전에 배치하세요."
   },
   {
+   "zh": "全部恢复默认",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "全部恢復預設",
+   "en": "Reset all to defaults",
+   "ja": "すべて既定に戻す",
+   "ko": "모두 기본값으로"
+  },
+  {
    "zh": "全部显卡",
    "src": "qml/ProPerfOrbs.qml",
    "zh-TW": "全部顯示卡",
@@ -5088,6 +5264,14 @@
    "en": "When off, recording and replay still receive audio; capture sound is not played locally.",
    "ja": "オフでも録画とリプレイに音声は保存されます。取り込んだ音声はこのPCでは再生されません。",
    "ko": "꺼도 녹화와 리플레이 저장은 계속됩니다. 캡처한 소리만 이 PC에서 재생하지 않습니다."
+  },
+  {
+   "zh": "关闭并捕获键鼠",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "關閉並擷取鍵鼠",
+   "en": "Close and capture keyboard & mouse",
+   "ja": "閉じてキーボード＆マウスを取得",
+   "ko": "닫고 키보드·마우스 캡처"
   },
   {
    "zh": "关闭弹性与转场",
@@ -5434,6 +5618,14 @@
    "ko": "추가 트랙 쓰기"
   },
   {
+   "zh": "冲突：",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "衝突：",
+   "en": "Conflict: ",
+   "ja": "競合：",
+   "ko": "충돌: "
+  },
+  {
    "zh": "减少 NR 明暗改动；1 为保留原图亮度",
    "src": "qml/NrLayerEditor.qml",
    "zh-TW": "減少 NR 明暗改動；1 為保留原圖亮度",
@@ -5608,6 +5800,14 @@
    "en": "Allocate converted subtitle",
    "ja": "変換字幕の確保",
    "ko": "변환된 자막 할당"
+  },
+  {
+   "zh": "切换",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "切換",
+   "en": "Toggle",
+   "ja": "トグル",
+   "ko": "토글"
   },
   {
    "zh": "切换会重建处理链，画面可能停顿几百毫秒。",
@@ -6194,6 +6394,14 @@
    "ko": "네이티브 픽셀"
   },
   {
+   "zh": "原始输入不可用，见日志",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "原始輸入不可用，見日誌",
+   "en": "Raw input unavailable; see the log",
+   "ja": "Raw Input を使用できません。ログを参照",
+   "ko": "Raw Input을 사용할 수 없습니다. 로그 참조"
+  },
+  {
    "zh": "原样保留",
    "src": "src/engine/ExportStreams.cpp",
    "zh-TW": "原樣保留",
@@ -6288,6 +6496,14 @@
    "en": "Dehaze",
    "ja": "かすみの除去",
    "ko": "안개 제거"
+  },
+  {
+   "zh": "去组合",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "去組合",
+   "en": "No modifier",
+   "ja": "修飾キー解除",
+   "ko": "조합키 해제"
   },
   {
    "zh": "去配对",
@@ -6456,6 +6672,22 @@
    "en": "Not used while double SR is on; it returns when double SR is turned off.",
    "ja": "2段階超解像がオンの間は使用されません。オフにすると戻ります。",
    "ko": "2단계 초해상도 사용 중에는 적용하지 않습니다. 해당 기능을 끄면 다시 적용됩니다."
+  },
+  {
+   "zh": "反死区",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "反死區",
+   "en": "Anti-dead zone",
+   "ja": "アンチデッドゾーン",
+   "ko": "안티 데드존"
+  },
+  {
+   "zh": "反转 Y 轴",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "反轉 Y 軸",
+   "en": "Invert Y axis",
+   "ja": "Y 軸を反転",
+   "ko": "Y축 반전"
   },
   {
    "zh": "反馈问题",
@@ -6778,6 +7010,22 @@
    "ko": "선택 사항 · 캡처 카드의 직접 오디오 입력에서 소리가 나지 않을 때 사용"
   },
   {
+   "zh": "右摇杆",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "右搖桿",
+   "en": "Right stick",
+   "ja": "右スティック",
+   "ko": "오른쪽 스틱"
+  },
+  {
+   "zh": "右摇杆正在缓慢推向右侧…视角一开始转动就标记",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "右搖桿正在緩慢推向右側…視角一開始轉動就標記",
+   "en": "The right stick is slowly moving right… mark as soon as the camera turns",
+   "ja": "右スティックをゆっくり右へ…視点が回り始めたらマーク",
+   "ko": "오른쪽 스틱을 천천히 오른쪽으로… 시점이 돌기 시작하면 표시"
+  },
+  {
    "zh": "右键空白添加 · 拖到连线上插入 · 拖远（上下超过一截）或按住 Alt 松手即断开 · 端口拖拽/点击连线 · 中键平移 · 滚轮缩放",
    "src": "qml/NodePage.qml",
    "zh-TW": "右鍵空白添加 · 拖到連線上插入 · 拖遠（上下超過一截）或按住 Alt 鬆手即斷開 · 端口拖拽/點擊連線 · 中鍵平移 · 滾輪縮放",
@@ -6834,6 +7082,14 @@
    "ko": "마이크 소리도 녹화합니다. 기본은 영상 소리와 혼합하며 별도 트랙으로 저장할 수도 있습니다."
   },
   {
+   "zh": "同时按相反方向",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "同時按相反方向",
+   "en": "Opposite keys together",
+   "ja": "逆方向の同時押し",
+   "ko": "반대 방향 동시 입력"
+  },
+  {
    "zh": "同时用这块显卡运算",
    "src": "qml/SettingsPage.qml",
    "zh-TW": "同時用這塊顯示卡運算",
@@ -6848,6 +7104,14 @@
    "en": "Soften excessive lightness and color changes together",
    "ja": "過大な明度と色の変化を同時に抑えます",
    "ko": "과도한 밝기·색상 변화를 함께 완화합니다."
+  },
+  {
+   "zh": "名称",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "名稱",
+   "en": "Name",
+   "ja": "名前",
+   "ko": "이름"
   },
   {
    "zh": "名称 A → Z",
@@ -6888,6 +7152,14 @@
    "en": "Forward the controller in the background",
    "ja": "バックグラウンドでもコントローラーを転送",
    "ko": "백그라운드에서 컨트롤러 전달"
+  },
+  {
+   "zh": "后按优先",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "後按優先",
+   "en": "Last pressed wins",
+   "ja": "後押し優先",
+   "ko": "나중 입력 우선"
   },
   {
    "zh": "后端切换失败，已恢复上一套参数",
@@ -7050,6 +7322,14 @@
    "ko": "PS5 스트리밍과 페어링 공유"
   },
   {
+   "zh": "响应曲线",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "響應曲線",
+   "en": "Response curve",
+   "ja": "レスポンスカーブ",
+   "ko": "응답 곡선"
+  },
+  {
    "zh": "唤醒",
    "src": "qml/Ps5SourceDialog.qml",
    "zh-TW": "喚醒",
@@ -7064,6 +7344,14 @@
    "en": "Wake failed ({}); make sure the PS5 is in rest mode, not powered off.",
    "ja": "起動に失敗しました（{}）。PS5 が電源オフではなくレストモードか確認してください。",
    "ko": "PS5 절전 해제 실패 ({}) · 전원이 완전히 꺼지지 않고 대기 모드인지 확인하세요."
+  },
+  {
+   "zh": "回中",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "回中",
+   "en": "Return to centre",
+   "ja": "センターへ戻る",
+   "ko": "중앙 복귀"
   },
   {
    "zh": "回到列表模式，恢复列表之前的设置和预设。",
@@ -7290,6 +7578,14 @@
    "ko": "이미지 리소스 할당 실패"
   },
   {
+   "zh": "圆形",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "圓形",
+   "en": "Circular",
+   "ja": "円形",
+   "ko": "원형"
+  },
+  {
    "zh": "圆形 ",
    "src": "qml/MaskEditor.qml",
    "zh-TW": "圓形 ",
@@ -7426,6 +7722,14 @@
    "ko": "균형"
   },
   {
+   "zh": "垂直倍率",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "垂直倍率",
+   "en": "Vertical scale",
+   "ja": "垂直倍率",
+   "ko": "세로 배율"
+  },
+  {
    "zh": "垂直同步",
    "src": "qml/NodePage.qml",
    "zh-TW": "垂直同步",
@@ -7504,6 +7808,14 @@
    "en": "Fill the window and crop what overflows",
    "ja": "ウィンドウいっぱいに表示し、はみ出す部分を切り取る",
    "ko": "창을 채우고 넘치는 부분을 자릅니다."
+  },
+  {
+   "zh": "填鼠标实际 DPI，使灵敏度与硬件无关；不改变鼠标本身",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "填滑鼠實際 DPI，使靈敏度與硬體無關；不改變滑鼠本身",
+   "en": "Enter your mouse’s real DPI so sensitivity is hardware-independent; the mouse itself is not changed",
+   "ja": "マウスの実際の DPI を入力すると感度がハードに依存しません。マウス自体は変更しません",
+   "ko": "마우스의 실제 DPI를 입력하면 감도가 하드웨어와 무관해집니다. 마우스 자체는 바뀌지 않습니다"
   },
   {
    "zh": "增加 NR 带来的提亮；0 取消这部分变化。",
@@ -7682,6 +7994,14 @@
    "ko": "오디오 동기화, 볼륨 및 출력 장치."
   },
   {
+   "zh": "处理 / 发送",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "處理 / 傳送",
+   "en": "Processing / submission",
+   "ja": "処理 / 送信",
+   "ko": "처리 / 전송"
+  },
+  {
    "zh": "处理 CPU P95: %1 ms",
    "src": "src/ui/bridge/Export.cpp",
    "zh-TW": "處理 CPU P95: %1 ms",
@@ -7768,6 +8088,15 @@
    "en": "Copy",
    "ja": "コピー",
    "ko": "복사"
+  },
+  {
+   "zh": "复制",
+   "ctx": "duplicate profile",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "複製",
+   "en": "Duplicate",
+   "ja": "複製",
+   "ko": "복제"
   },
   {
    "zh": "复制 · 恢复默认 · 删除",
@@ -8378,6 +8707,14 @@
    "ko": "실시간 미리보기 · 모든 파일에 적용"
   },
   {
+   "zh": "实时（本机测量，不是端到端延迟）",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "即時（本機測量，不是端到端延遲）",
+   "en": "Live (measured on this PC; not end-to-end latency)",
+   "ja": "ライブ（この PC で計測。エンドツーエンド遅延ではありません）",
+   "ko": "실시간(이 PC 측정값, 종단 간 지연 아님)"
+  },
+  {
    "zh": "实线：当前值 · 虚线：默认值；向外增加该项，并非越大越好。",
    "src": "qml/NrWebPad.qml",
    "zh-TW": "實線：目前值 · 虛線：預設值；向外增加該項，並非越大越好。",
@@ -8466,6 +8803,14 @@
    "ko": "비교용 원본"
   },
   {
+   "zh": "对角",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "對角",
+   "en": "Diagonals",
+   "ja": "斜め",
+   "ko": "대각선"
+  },
+  {
    "zh": "导入",
    "src": "qml/ManagePresetsDialog.qml",
    "zh-TW": "匯入",
@@ -8496,6 +8841,14 @@
    "en": "Import .vpcolor…",
    "ja": ".vpcolor をインポート…",
    "ko": ".vpcolor 가져오기…"
+  },
+  {
+   "zh": "导入 / 导出",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "匯入 / 匯出",
+   "en": "Import / export",
+   "ja": "インポート / エクスポート",
+   "ko": "가져오기 / 내보내기"
   },
   {
    "zh": "导入失败：%1",
@@ -8576,6 +8929,14 @@
    "en": "Imported preset",
    "ja": "インポートしたプリセット",
    "ko": "가져온 프리셋"
+  },
+  {
+   "zh": "导入键鼠方案",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "匯入鍵鼠方案",
+   "en": "Import keyboard/mouse profiles",
+   "ja": "キーボード／マウス設定をインポート",
+   "ko": "키보드·마우스 프로필 가져오기"
   },
   {
    "zh": "导入预设",
@@ -8674,6 +9035,14 @@
    "ko": "내보내기 작업 프로토콜 불일치"
   },
   {
+   "zh": "导出全部",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "匯出全部",
+   "en": "Export all",
+   "ja": "すべてエクスポート",
+   "ko": "모두 내보내기"
+  },
+  {
    "zh": "导出剪辑范围无效",
    "src": "src/engine/ExportJobManager.cpp",
    "zh-TW": "匯出剪輯範圍無效",
@@ -8744,6 +9113,14 @@
    "en": "Export error; see diagnostics",
    "ja": "書き出しで異常が発生しました。診断を確認してください",
    "ko": "내보내기 오류; 진단 보기"
+  },
+  {
+   "zh": "导出当前",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "匯出當前",
+   "en": "Export current",
+   "ja": "現在をエクスポート",
+   "ko": "현재 내보내기"
   },
   {
    "zh": "导出当前画面",
@@ -8832,6 +9209,14 @@
    "en": "Exporting; preview closed so the GPU goes to the export",
    "ja": "書き出し中のためプレビューを閉じ、GPU を書き出しに回しています",
    "ko": "내보내기에 GPU 자원을 사용하도록 미리보기를 닫았습니다."
+  },
+  {
+   "zh": "导出键鼠方案",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "匯出鍵鼠方案",
+   "en": "Export keyboard/mouse profiles",
+   "ja": "キーボード／マウス設定をエクスポート",
+   "ko": "키보드·마우스 프로필 내보내기"
   },
   {
    "zh": "导出页和极简模式都从这里的预设中选择",
@@ -9152,6 +9537,14 @@
    "en": "Left / top / right / bottom, in source pixels",
    "ja": "左 / 上 / 右 / 下、ソースのピクセル単位",
    "ko": "왼쪽/상단/오른쪽/하단, 소스 픽셀 단위"
+  },
+  {
+   "zh": "左摇杆",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "左搖桿",
+   "en": "Left stick",
+   "ja": "左スティック",
+   "ko": "왼쪽 스틱"
   },
   {
    "zh": "已从上次位置 %1 继续",
@@ -9546,6 +9939,14 @@
    "ko": "완료"
   },
   {
+   "zh": "已导入 %1 个方案%2",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "已匯入 %1 個方案%2",
+   "en": "Imported %1 profile(s)%2",
+   "ja": "%1 件の設定をインポートしました%2",
+   "ko": "프로필 %1개를 가져왔습니다%2"
+  },
+  {
    "zh": "已导入并使用 LUT：%1",
    "src": "src/ui/bridge/Colour.cpp",
    "zh-TW": "已匯入並使用 LUT：%1",
@@ -9570,12 +9971,28 @@
    "ko": "가져온 색상 프리셋: %1"
   },
   {
+   "zh": "已导出键鼠方案",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "已匯出鍵鼠方案",
+   "en": "Keyboard/mouse profiles exported",
+   "ja": "キーボード／マウス設定をエクスポートしました",
+   "ko": "키보드·마우스 프로필을 내보냈습니다"
+  },
+  {
    "zh": "已导出颜色预设",
    "src": "src/ui/bridge/Colour.cpp",
    "zh-TW": "已匯出顏色預設",
    "en": "Color preset exported",
    "ja": "カラープリセットを書き出しました",
    "ko": "색상 프리셋을 내보냈습니다."
+  },
+  {
+   "zh": "已应用到当前方案",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "已應用到當前方案",
+   "en": "Applied to the current profile",
+   "ja": "現在の設定に適用しました",
+   "ko": "현재 프로필에 적용했습니다"
   },
   {
    "zh": "已开启",
@@ -9626,12 +10043,28 @@
    "ko": "활성화됨: %1"
   },
   {
+   "zh": "已开启：连接后点击画面用键盘鼠标操作（Ctrl+Alt+Shift+Z 释放）",
+   "src": "qml/Ps5SourceDialog.qml",
+   "zh-TW": "已開啟：連線後點選畫面用鍵盤滑鼠操作（Ctrl+Alt+Shift+Z 釋放）",
+   "en": "On: after connecting, click the picture to play with keyboard and mouse (Ctrl+Alt+Shift+Z releases)",
+   "ja": "オン：接続後に映像をクリックするとキーボードとマウスで操作（Ctrl+Alt+Shift+Z で解除）",
+   "ko": "켜짐: 연결 후 화면을 클릭하면 키보드·마우스로 조작(Ctrl+Alt+Shift+Z로 해제)"
+  },
+  {
    "zh": "已按片源自动选档：%1",
    "src": "src/ui/bridge/Enhancement.cpp",
    "zh-TW": "已按片源自動選檔：%1",
    "en": "Selected from source metadata: %1",
    "ja": "ソース情報から選択しました：%1",
    "ko": "소스 메타데이터에서 선택됨: %1"
+  },
+  {
+   "zh": "已捕获 · Ctrl+Alt+Shift+Z 释放 · 切到其他窗口自动释放",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "已擷取 · Ctrl+Alt+Shift+Z 釋放 · 切到其他視窗自動釋放",
+   "en": "Captured · Ctrl+Alt+Shift+Z releases · switching windows releases automatically",
+   "ja": "取得中 · Ctrl+Alt+Shift+Z で解除 · 別ウィンドウに切り替えると自動解除",
+   "ko": "캡처됨 · Ctrl+Alt+Shift+Z로 해제 · 다른 창으로 전환하면 자동 해제"
   },
   {
    "zh": "已接入",
@@ -9954,6 +10387,14 @@
    "ko": "키보드·마우스 전달 해제됨 · 영상을 클릭하면 다시 전달합니다."
   },
   {
+   "zh": "已释放键盘和鼠标，PS5 虚拟手柄已归零（点击画面重新捕获）",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "已釋放鍵盤和滑鼠，PS5 虛擬手把已歸零（點選畫面重新擷取）",
+   "en": "Keyboard and mouse released; the virtual PS5 controller is neutral (click the picture to capture again)",
+   "ja": "キーボードとマウスを解除し、仮想コントローラーをニュートラルにしました（映像をクリックで再取得）",
+   "ko": "키보드·마우스를 해제했고 가상 컨트롤러는 중립입니다(화면을 클릭하면 다시 캡처)"
+  },
+  {
    "zh": "已锁定全屏 · Ctrl+L 解锁，Esc 退出全屏",
    "src": "qml/Main.qml",
    "zh-TW": "已鎖定全螢幕 · Ctrl+L 解鎖，Esc 退出全螢幕",
@@ -10018,6 +10459,14 @@
    "ko": "프레임 생성"
   },
   {
+   "zh": "幂函数",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "冪函式",
+   "en": "Power",
+   "ja": "べき関数",
+   "ko": "거듭제곱"
+  },
+  {
    "zh": "平台或驱动初始化失败；请更新 NVIDIA 驱动或选择兼容运行库",
    "src": "include/veyra/engine/BackendRecovery.h",
    "zh-TW": "平台或驅動初始化失敗；請更新 NVIDIA 驅動或選擇相容執行庫",
@@ -10042,6 +10491,14 @@
    "ko": "평소에는 숨겨져 있으며 포인터를 창 위쪽으로 가져가면 나타납니다."
   },
   {
+   "zh": "平滑",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "平滑",
+   "en": "Smoothing",
+   "ja": "スムージング",
+   "ko": "스무딩"
+  },
+  {
    "zh": "平衡",
    "src": "qml/NodePage.qml",
    "zh-TW": "平衡",
@@ -10064,6 +10521,14 @@
    "en": "Apply",
    "ja": "適用",
    "ko": "적용"
+  },
+  {
+   "zh": "应用到当前方案",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "應用到當前方案",
+   "en": "Apply to current profile",
+   "ja": "現在の設定に適用",
+   "ko": "현재 프로필에 적용"
   },
   {
    "zh": "应用推荐",
@@ -10232,6 +10697,22 @@
    "en": "Seconds to collect before playback starts; “Follow buffer level” uses the level chosen above. Takes effect the next time a network video is opened",
    "ja": "再生を始める前に溜める秒数です。「バッファー段階に従う」は上のバッファー段階で決まります。次回ネットワーク動画を開いたときから反映されます",
    "ko": "재생 전에 미리 받아 둘 시간(초)입니다. ‘버퍼 수준 따르기’는 위에서 선택한 수준을 사용합니다. 다음에 네트워크 영상을 열 때 적용됩니다."
+  },
+  {
+   "zh": "开始转",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "開始轉",
+   "en": "Start turning",
+   "ja": "旋回開始",
+   "ko": "회전 시작"
+  },
+  {
+   "zh": "开始转动了",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "開始轉動了",
+   "en": "It started turning",
+   "ja": "回り始めた",
+   "ko": "돌기 시작함"
   },
   {
    "zh": "开播自动选档",
@@ -10434,6 +10915,14 @@
    "ko": "강조색"
   },
   {
+   "zh": "归中",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "歸中",
+   "en": "Neutral",
+   "ja": "ニュートラル",
+   "ko": "중립"
+  },
+  {
    "zh": "当前 DLSS 补帧运行库要求至少 {}.{:02} 驱动（NGX 能力查询）",
    "src": "src/pipeline/EnhanceGraph.cpp",
    "zh-TW": "當前 DLSS 補幀執行庫要求至少 {}.{:02} 驅動（NGX 能力查詢）",
@@ -10600,6 +11089,14 @@
    "en": "Current playback settings",
    "ja": "現在の再生設定",
    "ko": "현재 재생 설정"
+  },
+  {
+   "zh": "当前方案",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "當前方案",
+   "en": "Current profile",
+   "ja": "現在の設定",
+   "ko": "현재 프로필"
   },
   {
    "zh": "当前显卡不支持预热",
@@ -10938,6 +11435,14 @@
    "ko": "왕복 "
   },
   {
+   "zh": "径向",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "徑向",
+   "en": "Radial",
+   "ja": "放射状",
+   "ko": "방사형"
+  },
+  {
    "zh": "待呈现",
    "src": "qml/NodePage.qml",
    "zh-TW": "待呈現",
@@ -10992,6 +11497,22 @@
    "en": "Could not save the shortcut",
    "ja": "ショートカットを保存できませんでした",
    "ko": "단축키를 저장하지 못했습니다."
+  },
+  {
+   "zh": "快速一圈",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "快速一圈",
+   "en": "One fast turn",
+   "ja": "速く一周",
+   "ko": "빠르게 한 바퀴"
+  },
+  {
+   "zh": "快速转身保留",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "快速轉身保留",
+   "en": "Fast-turn carry-over",
+   "ja": "高速旋回の持ち越し",
+   "ko": "빠른 회전 이월"
   },
   {
    "zh": "性能",
@@ -11056,6 +11577,22 @@
    "en": "Reset to default",
    "ja": "既定に戻す",
    "ko": "기본값으로 재설정"
+  },
+  {
+   "zh": "慢/快一圈计数比 %1：%2",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "慢/快一圈計數比 %1：%2",
+   "en": "Slow/fast turn count ratio %1: %2",
+   "ja": "遅い／速い一周のカウント比 %1：%2",
+   "ko": "느린/빠른 한 바퀴 카운트 비율 %1: %2"
+  },
+  {
+   "zh": "慢速一圈",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "慢速一圈",
+   "en": "One slow turn",
+   "ja": "ゆっくり一周",
+   "ko": "천천히 한 바퀴"
   },
   {
    "zh": "我的屏能到多少 nit；0 = 自动",
@@ -11466,6 +12003,14 @@
    "ko": "잘못된 실행 계획 크기 또는 초해상도 대상"
   },
   {
+   "zh": "扳机上升",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "扳機上升",
+   "en": "Trigger ramp-up",
+   "ja": "トリガーの立ち上がり",
+   "ko": "트리거 상승"
+  },
+  {
    "zh": "批量处理图片…",
    "src": "qml/ExportPage.qml",
    "zh-TW": "批量處理圖片…",
@@ -11618,6 +12163,14 @@
    "ko": "어두운 영역 범위 (니트)"
   },
   {
+   "zh": "抵消游戏的摇杆曲线；校准表来自校准第 2 步",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "抵消遊戲的搖桿曲線；校準表來自校準第 2 步",
+   "en": "Cancels the game’s stick curve; the calibration table comes from calibration step 2",
+   "ja": "ゲームのスティックカーブを打ち消します。校正テーブルは校正ステップ 2 から",
+   "ko": "게임의 스틱 곡선을 상쇄합니다. 보정 표는 보정 2단계에서 생성"
+  },
+  {
    "zh": "拉亮暗部",
    "src": "qml/ProDisplayPanel.qml",
    "zh-TW": "拉亮暗部",
@@ -11666,12 +12219,44 @@
    "ko": "새 키를 누르세요…"
   },
   {
+   "zh": "按下键盘按键，或在这里点击鼠标键 / 滚动滚轮",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "按下鍵盤按鍵，或在這裡點選滑鼠鍵 / 捲動滾輪",
+   "en": "Press a key, or click a mouse button / scroll the wheel here",
+   "ja": "キーを押すか、ここでマウスボタンをクリック／ホイールを回してください",
+   "ko": "키를 누르거나 여기서 마우스 버튼 클릭 / 휠을 굴리세요"
+  },
+  {
+   "zh": "按住",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "按住",
+   "en": "Hold",
+   "ja": "ホールド",
+   "ko": "누르고 있기"
+  },
+  {
+   "zh": "按住 L2（右键或手柄）时生效",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "按住 L2（右鍵或手把）時生效",
+   "en": "Active while L2 is held (right mouse button or controller)",
+   "ja": "L2（右クリックまたはコントローラー）を押している間有効",
+   "ko": "L2(마우스 오른쪽 또는 컨트롤러)를 누르는 동안 적용"
+  },
+  {
    "zh": "按住 V 查看原画",
    "src": "qml/ProDisplayPanel.qml",
    "zh-TW": "按住 V 查看原畫",
    "en": "Hold V to see the original",
    "ja": "V を押している間オリジナルを表示",
    "ko": "V를 누르고 있으면 원본을 볼 수 있습니다"
+  },
+  {
+   "zh": "按住「精确」键时生效（战斗方案：鼠标侧键 5）",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "按住「精確」鍵時生效（戰鬥方案：滑鼠側鍵 5）",
+   "en": "Active while the “Precision” key is held (Combat profile: mouse side button 5)",
+   "ja": "「精密」キーを押している間有効（戦闘設定：マウスサイドボタン 5）",
+   "ko": "‘정밀’ 키를 누르는 동안 적용(전투 프로필: 마우스 측면 버튼 5)"
   },
   {
    "zh": "按住查看原图，松开恢复增强画面",
@@ -11688,6 +12273,14 @@
    "en": "Hold to see the original",
    "ja": "押してオリジナルを表示",
    "ko": "누르는 동안 원본 표시"
+  },
+  {
+   "zh": "按住武器轮盘键时鼠标直接指向格子",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "按住武器輪盤鍵時滑鼠直接指向格子",
+   "en": "While the weapon-wheel key is held, the mouse points directly at a slot",
+   "ja": "武器ホイールキーを押している間、マウスで直接スロットを指します",
+   "ko": "무기 휠 키를 누르는 동안 마우스가 직접 칸을 가리킵니다"
   },
   {
    "zh": "按住看原图",
@@ -11722,12 +12315,28 @@
    "ko": "소스에서 선택"
   },
   {
+   "zh": "按键",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "按鍵",
+   "en": "Bindings",
+   "ja": "キー割り当て",
+   "ko": "키 설정"
+  },
+  {
    "zh": "按键可在 设置 → 快捷键 里改",
    "src": "qml/ProDisplayPanel.qml",
    "zh-TW": "按鍵可在 設定 → 快速鍵 裡改",
    "en": "Keys can be changed under Settings → Shortcuts",
    "ja": "キーは 設定 → ショートカット で変更できます",
    "ko": "설정 → 단축키에서 키를 변경할 수 있습니다."
+  },
+  {
+   "zh": "按键设置无效：%1",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "按鍵設定無效：%1",
+   "en": "Invalid binding: %1",
+   "ja": "無効なキー割り当て：%1",
+   "ko": "잘못된 키 설정: %1"
   },
   {
    "zh": "按音轨自动对齐",
@@ -11776,6 +12385,30 @@
    "en": "Sort",
    "ja": "並べ替え",
    "ko": "정렬"
+  },
+  {
+   "zh": "推到 0.6 仍未标记：游戏死区可能更大或镜头被锁定，请在可自由转动视角处重试",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "推到 0.6 仍未標記：遊戲死區可能更大或鏡頭被鎖定，請在可自由轉動視角處重試",
+   "en": "Reached 0.6 without a mark: the game’s dead zone may be larger or the camera is locked; retry where the camera can turn freely",
+   "ja": "0.6 までマークなし：デッドゾーンがさらに大きいか視点が固定されています。自由に視点を回せる場所で再試行してください",
+   "ko": "0.6까지 표시가 없습니다: 데드존이 더 크거나 시점이 고정되어 있습니다. 시점을 자유롭게 돌릴 수 있는 곳에서 다시 시도하세요"
+  },
+  {
+   "zh": "推杆 %1：同一参照物每次经过准星时标记，至少三次（两整圈）。已标记 %2 次",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "推杆 %1：同一參照物每次經過準星時標記，至少三次（兩整圈）。已標記 %2 次",
+   "en": "Deflection %1: mark each time the same landmark crosses the crosshair, at least three times (two full turns). %2 marks so far",
+   "ja": "倒し量 %1：同じ目印が照準を通過するたびにマーク（最低 3 回＝2 周）。マーク %2 回",
+   "ko": "기울기 %1: 같은 기준점이 조준점을 지날 때마다 표시, 최소 3회(두 바퀴). 표시 %2회"
+  },
+  {
+   "zh": "推杆上升",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "推杆上升",
+   "en": "Stick ramp-up",
+   "ja": "スティックの立ち上がり",
+   "ko": "스틱 상승"
   },
   {
    "zh": "描边",
@@ -11896,6 +12529,14 @@
    "en": "Camera frame rate",
    "ja": "カメラ出力フレームレート",
    "ko": "카메라 프레임 속도"
+  },
+  {
+   "zh": "摇杆优先",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "搖桿優先",
+   "en": "Stick priority",
+   "ja": "スティック優先",
+   "ko": "스틱 우선순위"
   },
   {
    "zh": "撤销",
@@ -12179,6 +12820,14 @@
    "ko": "이름은 1~48자여야 하며 다른 프리셋과 겹칠 수 없습니다."
   },
   {
+   "zh": "改键",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "改鍵",
+   "en": "Rebind",
+   "ja": "キー変更",
+   "ko": "키 변경"
+  },
+  {
    "zh": "效果",
    "src": "qml/ColourPanel.qml",
    "zh-TW": "效果",
@@ -12435,6 +13084,14 @@
    "ko": "자동 재연결"
   },
   {
+   "zh": "新建",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "新建",
+   "en": "New",
+   "ja": "新規",
+   "ko": "새로 만들기"
+  },
+  {
    "zh": "新预设名称",
    "src": "qml/ColourPanel.qml",
    "zh-TW": "新預設名稱",
@@ -12449,6 +13106,22 @@
    "en": "Method",
    "ja": "方式",
    "ko": "방식"
+  },
+  {
+   "zh": "方形",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "方形",
+   "en": "Square",
+   "ja": "四角",
+   "ko": "사각형"
+  },
+  {
+   "zh": "方案",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "方案",
+   "en": "Profiles",
+   "ja": "設定",
+   "ko": "프로필"
   },
   {
    "zh": "旋转显示器请使用 Windows 采集方式",
@@ -12963,6 +13636,14 @@
    "ko": "PNG/JPEG를 디코딩할 수 없습니다."
   },
   {
+   "zh": "无法设置 %1：%2",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "無法設定 %1：%2",
+   "en": "Cannot set %1: %2",
+   "ja": "%1 を設定できません：%2",
+   "ko": "%1을(를) 설정할 수 없습니다: %2"
+  },
+  {
    "zh": "无法读取 NVIDIA 驱动配置；请检查显卡和驱动是否支持此功能。",
    "src": "src/ui/NvidiaVrrProfileController.cpp",
    "zh-TW": "無法讀取 NVIDIA 驅動程式設定；請檢查顯示卡與驅動程式是否支援此功能。",
@@ -12993,6 +13674,14 @@
    "en": "Could not read the imported file",
    "ja": "インポートしたファイルを読み取れません",
    "ko": "가져온 파일을 읽을 수 없습니다."
+  },
+  {
+   "zh": "无法读取所选文件",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "無法讀取所選檔案",
+   "en": "Cannot read the selected file",
+   "ja": "選択したファイルを読み込めません",
+   "ko": "선택한 파일을 읽을 수 없습니다"
   },
   {
    "zh": "无法读取源文件",
@@ -13659,6 +14348,14 @@
    "ko": "구성 요소 업데이트"
   },
   {
+   "zh": "最多 %1 个方案",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "最多 %1 個方案",
+   "en": "At most %1 profiles",
+   "ja": "設定は最大 %1 件",
+   "ko": "프로필은 최대 %1개"
+  },
+  {
    "zh": "最多 4 个保护区域，请先删除一个",
    "src": "src/ui/bridge/View.cpp",
    "zh-TW": "最多 4 個保護區域，請先刪除一個",
@@ -13697,6 +14394,14 @@
    "en": "Maximize",
    "ja": "最大化",
    "ko": "최대화"
+  },
+  {
+   "zh": "最大推杆",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "最大推杆",
+   "en": "Maximum deflection",
+   "ja": "最大倒し量",
+   "ko": "최대 기울기"
   },
   {
    "zh": "最小",
@@ -14331,6 +15036,14 @@
    "ko": "표준"
   },
   {
+   "zh": "标记",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "標記",
+   "en": "Mark",
+   "ja": "マーク",
+   "ko": "표시"
+  },
+  {
    "zh": "校准",
    "src": "qml/ColourPanel.qml",
    "zh-TW": "校準",
@@ -14345,6 +15058,22 @@
    "en": "Calibrating…",
    "ja": "補正中…",
    "ko": "교정 중…"
+  },
+  {
+   "zh": "校准表",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "校準表",
+   "en": "Calibrated table",
+   "ja": "校正テーブル",
+   "ko": "보정 표"
+  },
+  {
+   "zh": "校准（手动引导）",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "校準（手動引導）",
+   "en": "Calibration (guided, manual)",
+   "ja": "校正（手動ガイド）",
+   "ko": "보정(수동 안내)"
   },
   {
    "zh": "样式",
@@ -15211,6 +15940,22 @@
    "ko": "이 캡처 카드는 이 형식을 제공하지 않습니다. 지원되는 해상도, 프레임 속도, 픽셀 형식을 선택하세요."
   },
   {
+   "zh": "死区 %1 · 最大 %2°/s",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "死區 %1 · 最大 %2°/s",
+   "en": "Dead zone %1 · max %2°/s",
+   "ja": "デッドゾーン %1 · 最大 %2°/s",
+   "ko": "데드존 %1 · 최대 %2°/s"
+  },
+  {
+   "zh": "死区形状",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "死區形狀",
+   "en": "Dead-zone shape",
+   "ja": "デッドゾーン形状",
+   "ko": "데드존 모양"
+  },
+  {
    "zh": "残差",
    "src": "src/ui/bridge/Status.cpp",
    "zh-TW": "殘差",
@@ -15275,6 +16020,22 @@
    "ko": "매 프레임 인식 · 640px · 작은 얼굴도 인식"
   },
   {
+   "zh": "每格滚轮按下一次；连续滚动最多排队 8 次",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "每格滾輪按下一次；連續捲動最多排隊 8 次",
+   "en": "Each wheel notch is one press; continuous scrolling queues at most 8",
+   "ja": "ホイール 1 段で 1 回押下。連続スクロールは最大 8 回まで",
+   "ko": "휠 한 칸에 한 번 누름. 연속 스크롤은 최대 8회까지"
+  },
+  {
+   "zh": "每次合成 %1 µs（最大 %2）· 发送间隔 %3 ms（最大 %4）· 超出最大转速 %5%",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "每次合成 %1 µs（最大 %2）· 傳送間隔 %3 ms（最大 %4）· 超出最大轉速 %5%",
+   "en": "%1 µs per update (max %2) · submit interval %3 ms (max %4) · above max turn rate %5%",
+   "ja": "更新ごと %1 µs（最大 %2）· 送信間隔 %3 ms（最大 %4）· 最大旋回超過 %5%",
+   "ko": "갱신당 %1 µs(최대 %2) · 전송 간격 %3 ms(최대 %4) · 최대 회전 초과 %5%"
+  },
+  {
    "zh": "每次启动播放一次，动画结束后继续；此开关会保存，角落按钮仅停止本次",
    "src": "qml/SettingsPage.qml",
    "zh-TW": "每次啟動播放一次，動畫結束後繼續；此開關會儲存，角落按鈕僅停止本次",
@@ -15289,6 +16050,14 @@
    "en": "Compares the source with the previous frame: pixels without a clear change reuse the previous output; clearly changed areas take the new result directly.",
    "ja": "ソースを前のフレームと比較し、目立った変化のないピクセルは前の出力を使い、変化した部分は新しい結果をそのまま使います。",
    "ko": "이전 프레임과 비교해 변화가 적은 픽셀은 이전 출력값을 재사용합니다. 변화가 뚜렷한 부분은 새 처리 결과를 사용합니다."
+  },
+  {
+   "zh": "水平倍率",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "水平倍率",
+   "en": "Horizontal scale",
+   "ja": "水平倍率",
+   "ko": "가로 배율"
   },
   {
    "zh": "没有匹配的格式",
@@ -15491,6 +16260,22 @@
    "ko": "연녹색"
   },
   {
+   "zh": "测完死区和至少 3 个推杆量后生成",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "測完死區和至少 3 個推杆量後生成",
+   "en": "Generated after the dead zone and at least 3 deflections are measured",
+   "ja": "デッドゾーンと 3 つ以上の倒し量を測定後に生成",
+   "ko": "데드존과 3개 이상의 기울기를 측정한 뒤 생성"
+  },
+  {
+   "zh": "测得死区 %1（已扣除约 220 ms 反应时间）",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "測得死區 %1（已扣除約 220 ms 反應時間）",
+   "en": "Measured dead zone %1 (about 220 ms reaction time deducted)",
+   "ja": "測定デッドゾーン %1（反応時間約 220 ms を差し引き済み）",
+   "ko": "측정된 데드존 %1(반응 시간 약 220 ms 차감)"
+  },
+  {
    "zh": "深黑底上的极轻渐变与抖动（防色带）",
    "src": "qml/SettingsPage.qml",
    "zh-TW": "深黑底上的極輕漸變與抖動（防色帶）",
@@ -15505,6 +16290,23 @@
    "en": "Blending",
    "ja": "ブレンド",
    "ko": "블렌딩"
+  },
+  {
+   "zh": "混合",
+   "ctx": "input mode",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "混合",
+   "en": "Hybrid",
+   "ja": "ハイブリッド",
+   "ko": "혼합"
+  },
+  {
+   "zh": "混合：手柄与键鼠合成一个手柄状态，同一摇杆只取一边，不叠加",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "混合：手把與鍵鼠合成一個手把狀態，同一搖桿只取一邊，不疊加",
+   "en": "Hybrid: controller and keyboard/mouse merge into one controller state; each stick comes from one source, never summed",
+   "ja": "ハイブリッド：コントローラーとキーボード／マウスを 1 つの状態に統合。各スティックは片方のみで加算しません",
+   "ko": "혼합: 컨트롤러와 키보드·마우스를 하나의 상태로 합칩니다. 각 스틱은 한쪽만 사용하며 더하지 않습니다"
   },
   {
    "zh": "混色器",
@@ -15545,6 +16347,14 @@
    "en": "Add or drop several videos\nAdding does not start the export",
    "ja": "複数の動画を追加またはドロップ\n追加しただけでは書き出しは始まりません",
    "ko": "여러 영상을 추가하거나 끌어 놓으세요.\n추가만으로 내보내기가 시작되지는 않습니다."
+  },
+  {
+   "zh": "添加按键",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "新增按鍵",
+   "en": "Add binding",
+   "ja": "キー割り当てを追加",
+   "ko": "키 설정 추가"
   },
   {
    "zh": "添加文件",
@@ -15651,12 +16461,28 @@
    "ko": "게임 및 프로그램 · "
   },
   {
+   "zh": "游戏中按 F1 步行 · F2 战斗 · F3 驾驶 · F4 菜单；切换时所有按键先松开",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "遊戲中按 F1 步行 · F2 戰鬥 · F3 駕駛 · F4 選單；切換時所有按鍵先鬆開",
+   "en": "In game: F1 On foot · F2 Combat · F3 Driving · F4 Menus; switching releases every input first",
+   "ja": "ゲーム中：F1 徒歩 · F2 戦闘 · F3 運転 · F4 メニュー。切り替え時はすべての入力を先に離します",
+   "ko": "게임 중: F1 도보 · F2 전투 · F3 운전 · F4 메뉴. 전환 시 모든 입력을 먼저 해제"
+  },
+  {
    "zh": "游戏加加（GamePP）",
    "src": "qml/Main.qml",
    "zh-TW": "遊戲加加（GamePP）",
    "en": "GamePP",
    "ja": "GamePP（游戏加加）",
    "ko": "GamePP"
+  },
+  {
+   "zh": "游戏曲线指数",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "遊戲曲線指數",
+   "en": "Game curve exponent",
+   "ja": "ゲームカーブ指数",
+   "ko": "게임 곡선 지수"
   },
   {
    "zh": "游戏模式",
@@ -15721,6 +16547,30 @@
    "en": "Game mode: exit mouse passthrough",
    "ja": "ゲームモード：マウス透過を解除",
    "ko": "게임 모드: 마우스 전달 해제"
+  },
+  {
+   "zh": "游戏自己的摇杆死区；校准第 1 步可测得",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "遊戲自己的搖桿死區；校準第 1 步可測得",
+   "en": "The game’s own stick dead zone; calibration step 1 measures it",
+   "ja": "ゲーム自身のスティックデッドゾーン。校正ステップ 1 で測定できます",
+   "ko": "게임 자체 스틱 데드존. 보정 1단계에서 측정"
+  },
+  {
+   "zh": "游戏转速 ≈ 推杆量^指数；常见 1.5–2.5",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "遊戲轉速 ≈ 推杆量^指數；常見 1.5–2.5",
+   "en": "Game turn rate ≈ deflection^exponent; commonly 1.5–2.5",
+   "ja": "ゲーム旋回速度 ≈ 倒し量^指数。一般に 1.5–2.5",
+   "ko": "게임 회전 속도 ≈ 기울기^지수. 보통 1.5–2.5"
+  },
+  {
+   "zh": "游戏转速到顶后继续推杆没有用；校准可测得饱和点",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "遊戲轉速到頂後繼續推杆沒有用；校準可測得飽和點",
+   "en": "Pushing further after the game’s turn rate tops out does nothing; calibration finds the saturation point",
+   "ja": "ゲームの旋回速度が上限に達した後は倒しても無意味。校正で飽和点を測定できます",
+   "ko": "게임 회전 속도가 최대에 도달하면 더 밀어도 소용없습니다. 보정으로 포화점을 찾을 수 있습니다"
   },
   {
    "zh": "源 %1 fps",
@@ -15795,12 +16645,36 @@
    "ko": "키보드로 슬라이더를 조절할 때의 간격"
   },
   {
+   "zh": "滚轮不能作为组合键",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "滾輪不能作為組合鍵",
+   "en": "The wheel cannot be a modifier",
+   "ja": "ホイールは修飾キーにできません",
+   "ko": "휠은 조합키로 쓸 수 없습니다"
+  },
+  {
+   "zh": "滚轮按住时长",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "滾輪按住時長",
+   "en": "Wheel press duration",
+   "ja": "ホイールの押下時間",
+   "ko": "휠 누름 시간"
+  },
+  {
    "zh": "滚降强度 (%)",
    "src": "qml/ProDisplayPanel.qml",
    "zh-TW": "滾降強度 (%)",
    "en": "Roll-off strength (%)",
    "ja": "壓縮の強さ (%)",
    "ko": "롤오프 강도(%)"
+  },
+  {
+   "zh": "灵敏度",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "靈敏度",
+   "en": "Sensitivity",
+   "ja": "感度",
+   "ko": "감도"
   },
   {
    "zh": "点一下滑块后用 ← → 调整，每次的幅度；Esc 或单击画面交还方向键给快进快退",
@@ -15865,6 +16739,14 @@
    "en": "Click a file on the left to preview",
    "ja": "左のファイルをクリックしてプレビュー",
    "ko": "미리 보려면 왼쪽의 파일을 클릭하세요."
+  },
+  {
+   "zh": "点按钮后关闭面板、点画面捕获，用鼠标慢慢（或快速）转正好一圈，再按 Ctrl+Alt+Shift+Z",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "點按鈕後關閉面板、點畫面擷取，用滑鼠慢慢（或快速）轉正好一圈，再按 Ctrl+Alt+Shift+Z",
+   "en": "Press the button, close the panel, click the picture to capture, turn exactly one full circle slowly (or quickly) with the mouse, then press Ctrl+Alt+Shift+Z",
+   "ja": "ボタンを押してパネルを閉じ、映像をクリックして取得、マウスでゆっくり（または速く）ちょうど一周回してから Ctrl+Alt+Shift+Z",
+   "ko": "버튼을 누르고 패널을 닫은 뒤 화면을 클릭해 캡처하고, 마우스로 천천히(또는 빠르게) 정확히 한 바퀴 돈 다음 Ctrl+Alt+Shift+Z"
   },
   {
    "zh": "点曲线",
@@ -15939,6 +16821,14 @@
    "ko": "버전 "
   },
   {
+   "zh": "状态",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "狀態",
+   "en": "Status",
+   "ja": "状態",
+   "ko": "상태"
+  },
+  {
    "zh": "状态: %1",
    "src": "src/ui/bridge/Export.cpp",
    "zh-TW": "狀態: %1",
@@ -15969,6 +16859,14 @@
    "en": "Ambient compensation: add some in a bright room; use none in a dark room",
    "ja": "環境光補正：明るい部屋では補正し、暗い部屋では補正しません",
    "ko": "밝은 방에서 볼 때 밝기를 보완합니다. 어두운 방에서는 사용하지 마세요."
+  },
+  {
+   "zh": "生成",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "生成",
+   "en": "Generate",
+   "ja": "生成",
+   "ko": "생성"
   },
   {
    "zh": "生效中",
@@ -16025,6 +16923,14 @@
    "en": "Control the PS5 through Remote Play",
    "ja": "リモートプレイで PS5 を操作",
    "ko": "리모트 플레이로 PS5 제어"
+  },
+  {
+   "zh": "用键盘鼠标模拟手柄（GTA 类方案、鼠标瞄准调校、校准）",
+   "src": "qml/Ps5SourceDialog.qml",
+   "zh-TW": "用鍵盤滑鼠模擬手把（GTA 類方案、滑鼠瞄準調校、校準）",
+   "en": "Play with keyboard and mouse as a virtual controller (GTA-style profiles, mouse-aim tuning, calibration)",
+   "ja": "キーボードとマウスで仮想コントローラーを操作（GTA 風設定、マウス照準調整、校正）",
+   "ko": "키보드·마우스로 가상 컨트롤러 조작(GTA 스타일 프로필, 마우스 조준 조정, 보정)"
   },
   {
    "zh": "由旧的 NR 预设导入",
@@ -16555,6 +17461,22 @@
    "ko": "절전 중 (깨우기 가능)"
   },
   {
+   "zh": "瞄准",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "瞄準",
+   "en": "Aiming",
+   "ja": "照準",
+   "ko": "조준"
+  },
+  {
+   "zh": "瞄准（ADS）倍率",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "瞄準（ADS）倍率",
+   "en": "Aim (ADS) multiplier",
+   "ja": "照準（ADS）倍率",
+   "ko": "조준(ADS) 배율"
+  },
+  {
    "zh": "矩形 ",
    "src": "qml/MaskEditor.qml",
    "zh-TW": "矩形 ",
@@ -16971,6 +17893,22 @@
    "ko": "색상 설정 붙여넣기"
   },
   {
+   "zh": "精确",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "精確",
+   "en": "Precision",
+   "ja": "精密",
+   "ko": "정밀"
+  },
+  {
+   "zh": "精确瞄准倍率",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "精確瞄準倍率",
+   "en": "Precision-aim multiplier",
+   "ja": "精密照準倍率",
+   "ko": "정밀 조준 배율"
+  },
+  {
    "zh": "精细",
    "src": "qml/BeautyEditor.qml",
    "zh-TW": "精細",
@@ -17187,6 +18125,14 @@
    "ko": "약 %1 (영상 %2Mbps × %3, 오디오 별도)"
   },
   {
+   "zh": "纯文本文件，不含任何 PSN 或配对信息",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "純文字檔案，不含任何 PSN 或配對資訊",
+   "en": "Plain-text file; contains no PSN or pairing information",
+   "ja": "プレーンテキスト。PSN やペアリング情報は含みません",
+   "ko": "일반 텍스트 파일. PSN이나 페어링 정보는 포함되지 않습니다"
+  },
+  {
    "zh": "纹理",
    "src": "src/ui/bridge/Colour.cpp",
    "zh-TW": "紋理",
@@ -17201,6 +18147,14 @@
    "en": "Texture kept",
    "ja": "質感の保持",
    "ko": "질감 유지"
+  },
+  {
+   "zh": "线性",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "線性",
+   "en": "Linear",
+   "ja": "リニア",
+   "ko": "선형"
   },
   {
    "zh": "组件与许可",
@@ -17233,6 +18187,14 @@
    "en": "Classic",
    "ja": "クラシック",
    "ko": "클래식"
+  },
+  {
+   "zh": "结果",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "結果",
+   "en": "Result",
+   "ja": "結果",
+   "ko": "결과"
   },
   {
    "zh": "继续上次",
@@ -17705,6 +18667,14 @@
    "en": "Auto NR instance pool unavailable; keeping 1080p NR",
    "ja": "自動 NR のインスタンスプールを使用できません。1080p NR を維持します",
    "ko": "자동 NR 처리 구성을 사용할 수 없어 1080p NR을 유지합니다."
+  },
+  {
+   "zh": "自动从画面识别转速并不可靠，因此由你观察并标记。在游戏中找一处可自由转动视角的地方站定，关闭其他输入。标记可按空格，Esc 取消。",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "自動從畫面識別轉速並不可靠，因此由你觀察並標記。在遊戲中找一處可自由轉動視角的地方站定，關閉其他輸入。標記可按空格，Esc 取消。",
+   "en": "Detecting turn speed from the picture is not reliable, so you watch and mark. Stand somewhere in the game where the camera turns freely and leave other inputs alone. Space marks, Esc cancels.",
+   "ja": "映像から旋回速度を自動認識するのは信頼できないため、あなたが観察してマークします。ゲーム内で視点を自由に回せる場所に立ち、他の入力はしないでください。スペースでマーク、Esc で中止。",
+   "ko": "화면에서 회전 속도를 자동 인식하는 것은 신뢰할 수 없으므로 직접 보고 표시합니다. 게임에서 시점을 자유롭게 돌릴 수 있는 곳에 서서 다른 입력은 하지 마세요. Space로 표시, Esc로 취소."
   },
   {
    "zh": "自动估算",
@@ -18483,6 +19453,14 @@
    "ko": "계정 ID 받기"
   },
   {
+   "zh": "菜单方案用左摇杆当光标",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "選單方案用左搖桿當遊標",
+   "en": "The Menus profile uses the left stick as a cursor",
+   "ja": "メニュー設定では左スティックをカーソルとして使用",
+   "ko": "메뉴 프로필은 왼쪽 스틱을 커서로 사용"
+  },
+  {
    "zh": "蓝",
    "src": "qml/ColourCurve.qml",
    "zh-TW": "藍",
@@ -19041,6 +20019,14 @@
    "en": "Remember each film",
    "ja": "作品ごとに記憶",
    "ko": "영상별로 저장"
+  },
+  {
+   "zh": "记录",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "記錄",
+   "en": "Record",
+   "ja": "記録",
+   "ko": "기록"
   },
   {
    "zh": "记忆与自动化",
@@ -19995,6 +20981,14 @@
    "ko": "상한을 넘는 밝기는 압축해야 합니다. 실제로 밝은 부분이 잘리는지는 샘플 측정값으로 확인하세요."
   },
   {
+   "zh": "超过最大转速的移动在这段时间内继续转完；0 = 关闭，停止最干脆",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "超過最大轉速的移動在這段時間內繼續轉完；0 = 關閉，停止最乾脆",
+   "en": "Movement beyond the max turn rate keeps turning for up to this long; 0 = off, the crispest stop",
+   "ja": "最大旋回速度を超えた分をこの時間内で回し切ります。0 = オフ（最も素早く停止）",
+   "ko": "최대 회전 속도를 넘는 움직임을 이 시간 동안 이어서 돕니다. 0 = 끔(가장 깔끔한 정지)"
+  },
+  {
    "zh": "超采样：先超到目标尺寸再精确缩回，更自然、略软；显存更高，降噪和补帧按缩回后尺寸运行。",
    "src": "qml/SrStageEditor.qml",
    "zh-TW": "超取樣：先超到目標尺寸再精確縮回，更自然、略軟；顯示記憶體更高，降噪和補幀按縮回後尺寸執行。",
@@ -20235,6 +21229,38 @@
    "ko": "자막 변환"
   },
   {
+   "zh": "转身保留",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "轉身保留",
+   "en": "Carrying turn",
+   "ja": "旋回持ち越し中",
+   "ko": "회전 이월 중"
+  },
+  {
+   "zh": "轮盘",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "輪盤",
+   "en": "Wheel",
+   "ja": "ホイール",
+   "ko": "휠"
+  },
+  {
+   "zh": "轮盘灵敏度",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "輪盤靈敏度",
+   "en": "Radial-menu sensitivity",
+   "ja": "ホイールメニュー感度",
+   "ko": "휠 메뉴 감도"
+  },
+  {
+   "zh": "轮盘：按住时鼠标定位右摇杆",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "輪盤：按住時滑鼠定位右搖桿",
+   "en": "Radial: while held, the mouse positions the right stick",
+   "ja": "ホイール：押している間マウスで右スティックを位置決め",
+   "ko": "휠: 누르는 동안 마우스가 오른쪽 스틱 위치를 지정"
+  },
+  {
    "zh": "软件",
    "src": "qml/SettingsPage.qml",
    "zh-TW": "軟體",
@@ -20307,6 +21333,22 @@
    "ko": "소프트웨어"
   },
   {
+   "zh": "轴向",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "軸向",
+   "en": "Axial",
+   "ja": "軸方向",
+   "ko": "축 방향"
+  },
+  {
+   "zh": "轴向：水平与垂直分别越过死区（适合轴向死区的游戏）",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "軸向：水平與垂直分別越過死區（適合軸向死區的遊戲）",
+   "en": "Axial: horizontal and vertical escape the dead zone separately (for games with axial dead zones)",
+   "ja": "軸方向：水平と垂直を別々にデッドゾーン外へ（軸方向デッドゾーンのゲーム向け）",
+   "ko": "축 방향: 가로와 세로가 각각 데드존을 벗어남(축 방향 데드존 게임용)"
+  },
+  {
    "zh": "轻",
    "src": "qml/SettingsPage.qml",
    "zh-TW": "輕",
@@ -20337,6 +21379,22 @@
    "en": "Load source",
    "ja": "ソースを読み込む",
    "ko": "입력 불러오기"
+  },
+  {
+   "zh": "较大者",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "較大者",
+   "en": "Larger",
+   "ja": "大きい方",
+   "ko": "큰 쪽"
+  },
+  {
+   "zh": "较大者：手柄摇杆推得比键鼠多时用手柄（可随时拿起手柄驾驶）",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "較大者：手把搖桿推得比鍵鼠多時用手把（可隨時拿起手把駕駛）",
+   "en": "Larger: the controller stick wins when pushed further than keyboard/mouse (pick up the controller to drive at any time)",
+   "ja": "大きい方：コントローラーのスティックの方が大きく倒されていればコントローラーを使用（いつでもコントローラーで運転可能）",
+   "ko": "큰 쪽: 컨트롤러 스틱을 키보드·마우스보다 더 밀면 컨트롤러 사용(언제든 컨트롤러로 운전 가능)"
   },
   {
    "zh": "输入",
@@ -20401,6 +21459,22 @@
    "en": "Input timeline irregular",
    "ja": "入力タイムラインの異常",
    "ko": "입력 타임라인 이상"
+  },
+  {
+   "zh": "输入来源",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "輸入來源",
+   "en": "Input source",
+   "ja": "入力元",
+   "ko": "입력 소스"
+  },
+  {
+   "zh": "输入模式为「仅手柄」，键鼠不会发送到 PS5；在键鼠控制里切换模式",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "輸入模式為「僅手把」，鍵鼠不會傳送到 PS5；在鍵鼠控制裡切換模式",
+   "en": "Input mode is “Controller only”, so keyboard/mouse is not sent to the PS5; change the mode in Keyboard & mouse",
+   "ja": "入力モードが「コントローラーのみ」のためキーボード／マウスは PS5 に送られません。キーボード＆マウスでモードを変更してください",
+   "ko": "입력 모드가 ‘컨트롤러만’이라 키보드·마우스가 PS5로 전송되지 않습니다. 키보드·마우스에서 모드를 바꾸세요"
   },
   {
    "zh": "输入空间不匹配",
@@ -21051,12 +22125,28 @@
    "ko": "호스트에 연결할 수 없습니다. 주소가 올바른지, 호스트가 켜져 있는지, Sunshine이 실행 중인지, 방화벽이 TCP 47984/47989를 허용하는지 확인하세요."
   },
   {
+   "zh": "连发",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "連發",
+   "en": "Repeat",
+   "ja": "連打",
+   "ko": "연타"
+  },
+  {
    "zh": "连接",
    "src": "qml/Ps5SourceDialog.qml",
    "zh-TW": "連接",
    "en": "Connect",
    "ja": "接続",
    "ko": "연결"
+  },
+  {
+   "zh": "连接 PS5 串流或 PS5 手柄控制后可用；关闭时手柄输入与以前完全相同",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "連線 PS5 串流或 PS5 手把控制後可用；關閉時手把輸入與以前完全相同",
+   "en": "Available during a PS5 stream or PS5 controller-only session; when off, controller input is exactly as before",
+   "ja": "PS5 ストリームまたは PS5 コントローラー操作中に使用可能。オフのときコントローラー入力は従来とまったく同じです",
+   "ko": "PS5 스트리밍 또는 PS5 컨트롤러 제어 중 사용 가능. 끄면 컨트롤러 입력은 이전과 완전히 같습니다"
   },
   {
    "zh": "连接中",
@@ -21803,6 +22893,14 @@
    "ko": "다시 시작하면 적용됩니다."
   },
   {
+   "zh": "重命名",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "重新命名",
+   "en": "Rename",
+   "ja": "名前を変更",
+   "ko": "이름 변경"
+  },
+  {
    "zh": "重命名 · 复制 · 删除",
    "src": "qml/ProPage.qml",
    "zh-TW": "重命名 · 複製 · 刪除",
@@ -21907,6 +23005,38 @@
    "ko": "오류 112"
   },
   {
+   "zh": "键盘 → 左摇杆与扳机",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "鍵盤 → 左搖桿與扳機",
+   "en": "Keyboard → left stick and triggers",
+   "ja": "キーボード → 左スティックとトリガー",
+   "ko": "키보드 → 왼쪽 스틱과 트리거"
+  },
+  {
+   "zh": "键盘或鼠标已断开，所有模拟按键已松开；重新连接后点击画面继续",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "鍵盤或滑鼠已斷開，所有模擬按鍵已鬆開；重新連線後點選畫面繼續",
+   "en": "A keyboard or mouse was disconnected; every simulated input was released. Reconnect it and click the picture to continue",
+   "ja": "キーボードまたはマウスが切断され、すべての模擬入力を離しました。再接続後に映像をクリックして続行",
+   "ko": "키보드 또는 마우스가 분리되어 모든 모의 입력을 해제했습니다. 다시 연결한 뒤 화면을 클릭해 계속하세요"
+  },
+  {
+   "zh": "键盘踩油门的渐进；松开总是立即归零",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "鍵盤踩油門的漸進；鬆開總是立即歸零",
+   "en": "Gradual keyboard throttle; releasing always returns to zero at once",
+   "ja": "キーボードのアクセルを段階的に。離すと常に即座にゼロ",
+   "ko": "키보드 가속의 점진적 증가. 떼면 항상 즉시 0"
+  },
+  {
+   "zh": "键盘鼠标 → 虚拟手柄。PS5 游戏只接收手柄摇杆，转向速度有上限；这不是原生鼠标瞄准。",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "鍵盤滑鼠 → 虛擬手把。PS5 遊戲只接收手把搖桿，轉向速度有上限；這不是原生滑鼠瞄準。",
+   "en": "Keyboard and mouse → virtual controller. PS5 games only receive controller sticks with a capped turn rate; this is not native mouse aiming.",
+   "ja": "キーボードとマウス → 仮想コントローラー。PS5 のゲームはスティック入力のみで旋回速度に上限があります。ネイティブのマウス照準ではありません。",
+   "ko": "키보드·마우스 → 가상 컨트롤러. PS5 게임은 컨트롤러 스틱만 받으며 회전 속도에 상한이 있습니다. 네이티브 마우스 조준이 아닙니다."
+  },
+  {
    "zh": "键盘鼠标已交给主机 · Ctrl+Alt+Shift+Z 释放 · +Q 断开",
    "src": "qml/StreamHud.qml",
    "zh-TW": "鍵盤滑鼠已交給主機 · Ctrl+Alt+Shift+Z 釋放 · +Q 斷開",
@@ -21921,6 +23051,62 @@
    "en": "Keyboard and mouse not captured · click the picture to capture",
    "ja": "キーボードとマウスは未キャプチャー · 映像をクリックでキャプチャー",
    "ko": "키보드·마우스 전달 안 함 · 영상을 클릭하면 전달 시작"
+  },
+  {
+   "zh": "键鼠",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "鍵鼠",
+   "en": "Keyboard/mouse",
+   "ja": "キーボード／マウス",
+   "ko": "키보드·마우스"
+  },
+  {
+   "zh": "键鼠已接管 PS5 虚拟手柄 · Ctrl+Alt+Shift+Z 释放 · F1–F4 切换方案",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "鍵鼠已接管 PS5 虛擬手把 · Ctrl+Alt+Shift+Z 釋放 · F1–F4 切換方案",
+   "en": "Keyboard & mouse now drive the virtual PS5 controller · Ctrl+Alt+Shift+Z releases · F1–F4 switch profiles",
+   "ja": "キーボード＆マウスが仮想 PS5 コントローラーを操作中 · Ctrl+Alt+Shift+Z で解除 · F1–F4 で設定切り替え",
+   "ko": "키보드·마우스가 가상 PS5 컨트롤러를 조작 중 · Ctrl+Alt+Shift+Z로 해제 · F1–F4로 프로필 전환"
+  },
+  {
+   "zh": "键鼠控制",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "鍵鼠控制",
+   "en": "Keyboard & mouse",
+   "ja": "キーボード＆マウス",
+   "ko": "키보드·마우스"
+  },
+  {
+   "zh": "键鼠方案 (*.txt)",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "鍵鼠方案 (*.txt)",
+   "en": "Keyboard/mouse profiles (*.txt)",
+   "ja": "キーボード／マウス設定 (*.txt)",
+   "ko": "키보드·마우스 프로필 (*.txt)"
+  },
+  {
+   "zh": "键鼠设置",
+   "src": "qml/Ps5SourceDialog.qml",
+   "zh-TW": "鍵鼠設定",
+   "en": "Keyboard & mouse settings",
+   "ja": "キーボード＆マウス設定",
+   "ko": "키보드·마우스 설정"
+  },
+  {
+   "zh": "键鼠配置保存失败，请检查用户目录权限",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "鍵鼠設定儲存失敗，請檢查使用者目錄許可權",
+   "en": "Saving keyboard/mouse settings failed; check permissions of the user folder",
+   "ja": "キーボード／マウス設定を保存できません。ユーザーフォルダーの権限を確認してください",
+   "ko": "키보드·마우스 설정 저장 실패. 사용자 폴더 권한을 확인하세요"
+  },
+  {
+   "zh": "键鼠配置无法读取，已恢复默认；原文件已保留为 %1",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "鍵鼠設定無法讀取，已恢復預設；原檔案已保留為 %1",
+   "en": "Keyboard/mouse settings could not be read; defaults restored, the original file was kept as %1",
+   "ja": "キーボード／マウス設定を読み込めないため既定に戻しました。元のファイルは %1 として保存",
+   "ko": "키보드·마우스 설정을 읽을 수 없어 기본값으로 복원했습니다. 원본 파일은 %1(으)로 보관"
   },
   {
    "zh": "长句自动缩小",
@@ -22219,6 +23405,14 @@
    "ko": "DirectX 12를 지원하는 하드웨어 GPU가 필요합니다."
   },
   {
+   "zh": "需要正在进行的 PS5 串流或 PS5 手柄控制，并且 Veyra 窗口在前台",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "需要正在進行的 PS5 串流或 PS5 手把控制，並且 Veyra 視窗在前臺",
+   "en": "Needs an active PS5 stream or PS5 controller-only session, with the Veyra window in the foreground",
+   "ja": "進行中の PS5 ストリームまたは PS5 コントローラー操作と、前面の Veyra ウィンドウが必要です",
+   "ko": "진행 중인 PS5 스트리밍 또는 PS5 컨트롤러 제어와 앞쪽에 있는 Veyra 창이 필요합니다"
+  },
+  {
    "zh": "需要直接媒体地址，普通网页或需要网页登录的页面不能直接播放。直播流通常无法拖动进度。",
    "src": "qml/NetworkSourceDialog.qml",
    "zh-TW": "需要直接媒體位址，一般網頁或需要網頁登入的頁面無法直接播放。直播串流通常無法拖曳進度。",
@@ -22233,6 +23427,14 @@
    "en": "Administrator rights required",
    "ja": "管理者権限が必要です",
    "ko": "관리자 권한 필요"
+  },
+  {
+   "zh": "需要至少标记三次（两整圈）",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "需要至少標記三次（兩整圈）",
+   "en": "At least three marks (two full turns) are needed",
+   "ja": "最低 3 回のマーク（2 周）が必要です",
+   "ko": "최소 3회 표시(두 바퀴)가 필요합니다"
   },
   {
    "zh": "需要重启软件",
@@ -23651,6 +24853,14 @@
    "ko": "기본적으로 보조 자막 표시"
   },
   {
+   "zh": "默认键位按 GTA V PlayStation 布局假设，并非 GTA VI 已核实的键位；请对照游戏内手柄设置修改。",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "預設鍵位按 GTA V PlayStation 佈局假設，並非 GTA VI 已核實的鍵位；請對照遊戲內手把設定修改。",
+   "en": "Default bindings assume the GTA V PlayStation layout and are not verified GTA VI controls; check the game’s controller settings and adjust.",
+   "ja": "既定のキー配置は GTA V の PlayStation レイアウトを想定したもので、GTA VI で確認済みではありません。ゲーム内のコントローラー設定と照合して変更してください。",
+   "ko": "기본 키 배치는 GTA V PlayStation 레이아웃을 가정한 것으로 GTA VI에서 확인된 것이 아닙니다. 게임 내 컨트롤러 설정과 대조해 수정하세요."
+  },
+  {
    "zh": "默认预设保存失败：",
    "src": "src/ui/bridge/Chain.cpp",
    "zh-TW": "預設預設儲存失敗：",
@@ -23681,6 +24891,54 @@
    "en": "The default preset's edit mode is invalid",
    "ja": "既定のプリセットの編集モードが不正です",
    "ko": "기본 프리셋의 편집 모드가 잘못되었습니다."
+  },
+  {
+   "zh": "鼠标 DPI",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "滑鼠 DPI",
+   "en": "Mouse DPI",
+   "ja": "マウス DPI",
+   "ko": "마우스 DPI"
+  },
+  {
+   "zh": "鼠标 → 摇杆",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "滑鼠 → 搖桿",
+   "en": "Mouse → stick",
+   "ja": "マウス → スティック",
+   "ko": "마우스 → 스틱"
+  },
+  {
+   "zh": "鼠标事件 %1/s（报告间隔约 %2 ms）· 按键事件 %3/s · 按住 %4",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "滑鼠事件 %1/s（報告間隔約 %2 ms）· 按鍵事件 %3/s · 按住 %4",
+   "en": "Mouse events %1/s (report interval ≈ %2 ms) · key events %3/s · held %4",
+   "ja": "マウスイベント %1/s（報告間隔 約 %2 ms）· キーイベント %3/s · 押下中 %4",
+   "ko": "마우스 이벤트 %1/s(보고 간격 약 %2 ms) · 키 이벤트 %3/s · 누름 %4"
+  },
+  {
+   "zh": "鼠标加速",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "滑鼠加速",
+   "en": "Mouse acceleration",
+   "ja": "マウス加速",
+   "ko": "마우스 가속"
+  },
+  {
+   "zh": "鼠标驱动",
+   "src": "qml/Ps5KbmDialog.qml",
+   "zh-TW": "滑鼠驅動",
+   "en": "Mouse drives",
+   "ja": "マウスの操作対象",
+   "ko": "마우스 대상"
+  },
+  {
+   "zh": "（%1 条已修正，见日志）",
+   "src": "src/ui/bridge/Ps5Kbm.cpp",
+   "zh-TW": "（%1 條已修正，見日誌）",
+   "en": " (%1 corrected; see the log)",
+   "ja": "（%1 件を修正、ログ参照）",
+   "ko": "(%1건 수정됨, 로그 참조)"
   },
   {
    "zh": "（MP4，录下处理后的画面和正在播放的声音）",

@@ -10,6 +10,9 @@ target_include_directories(veyra_remoteplay_core PUBLIC "${VEYRA_ROOT}/include")
 target_compile_features(veyra_remoteplay_core PUBLIC cxx_std_20)
 set_target_properties(veyra_remoteplay_core PROPERTIES CXX_EXTENSIONS OFF)
 target_link_libraries(veyra_remoteplay_core PUBLIC Threads::Threads)
+# Keyboard/mouse → virtual controller (portable; sampled by the session owner).
+include("${CMAKE_CURRENT_LIST_DIR}/VeyraKbm.cmake")
+target_link_libraries(veyra_remoteplay_core PUBLIC veyra_remoteplay_kbm)
 # Shared pinned native dependency for the product and probes. No stub fallback.
 enable_language(C)
 set(VEYRA_RP_CHIAKI_SOURCE_DIR "" CACHE PATH "Patched chiaki-ng staging source tree")

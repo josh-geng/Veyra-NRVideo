@@ -19,6 +19,7 @@
 struct AVCodecContext;
 struct AVFrame;
 struct ID3D12Device;
+namespace veyra::remoteplay::kbm { class KbmEngine; }
 
 namespace veyra::source {
 
@@ -36,6 +37,10 @@ struct RemotePlayConnectDesc {
     // Set by the engine; shared ownership keeps the exact presentation adapter
     // alive until the decoder owner has stopped, including failed connects.
     std::shared_ptr<ID3D12Device> decodeDevice;
+    // Optional keyboard/mouse engine. The session owner samples it immediately before
+    // each controller submission and merges it with the pad (see kbm::KbmEngine). Null:
+    // the pad path is exactly as before.
+    std::shared_ptr<remoteplay::kbm::KbmEngine> keyboardMouse;
 };
 
 class RemotePlaySource final : public IFrameSource {

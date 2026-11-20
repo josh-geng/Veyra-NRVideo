@@ -75,6 +75,7 @@ DialogTextField 1.0 DialogTextField.qml
 NetworkSourceDialog 1.0 NetworkSourceDialog.qml
 CaptureSourceDialog 1.0 CaptureSourceDialog.qml
 Ps5SourceDialog 1.0 Ps5SourceDialog.qml
+Ps5KbmDialog 1.0 Ps5KbmDialog.qml
 PcSourceDialog 1.0 PcSourceDialog.qml
 XboxSourceDialog 1.0 XboxSourceDialog.qml
 ScreenSourceDialog 1.0 ScreenSourceDialog.qml

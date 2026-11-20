@@ -132,6 +132,13 @@ DialogLayer {
             VButton { objectName: "ps5-open-capture"; text: qsTr("采集卡设置"); ghost: true; onClicked: dialogHost.open("capture") }
         }
         VRow {
+            label: qsTr("键鼠控制")
+            hint: veyra.ps5Kbm && veyra.ps5Kbm.enabled === true
+                  ? qsTr("已开启：连接后点击画面用键盘鼠标操作（Ctrl+Alt+Shift+Z 释放）")
+                  : qsTr("用键盘鼠标模拟手柄（GTA 类方案、鼠标瞄准调校、校准）")
+            VButton { objectName: "ps5-open-kbm"; text: qsTr("键鼠设置"); ghost: true; onClicked: dialogHost.open("ps5kbm") }
+        }
+        VRow {
             label: qsTr("陀螺仪")
             hint: veyra.ps5.controller ? (veyra.ps5.gyro ? qsTr("手柄支持陀螺仪") : qsTr("手柄没有陀螺仪")) : qsTr("连接串流及电脑手柄后可校准")
             VButton { text: veyra.ps5.calibrating ? qsTr("校准中…") : qsTr("校准"); ghost: true; onClicked: veyra.ps5Calibrate() }

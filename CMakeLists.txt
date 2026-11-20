@@ -1283,6 +1283,7 @@ if(VEYRA_BUILD_QML_UI AND Qt6_FOUND)
     src/ui/bridge/VirtualCaptureAudioSetup.cpp
     src/ui/bridge/VirtualCaptureAudioSetup.h
     src/ui/bridge/RemotePlay.cpp
+    src/ui/bridge/Ps5Kbm.cpp
     src/ui/bridge/Export.cpp
     src/ui/bridge/Subtitles.cpp
     src/ui/bridge/Playback.cpp
@@ -1869,7 +1870,7 @@ target_link_options(veyra_hdr_tuning_tests PRIVATE /STACK:33554432)
     # Qt paths under E:/项目. Those system libraries come from #pragma comment in
     # the private QmlPlayerBridge_p.h instead.
     if(TARGET veyra_qml_bridge)
-      target_sources(veyra_qml_bridge PRIVATE src/remoteplay/ControllerInput.cpp)
+      target_sources(veyra_qml_bridge PRIVATE src/remoteplay/ControllerInput.cpp src/ui/Ps5KbmCapture.cpp include/veyra/ui/Ps5KbmCapture.h)
       target_link_libraries(veyra_qml_bridge PUBLIC $<TARGET_LINKER_FILE:SDL3::SDL3-static>)
       target_link_libraries(veyra_qml_bridge PRIVATE SDL3::Headers)
     endif()

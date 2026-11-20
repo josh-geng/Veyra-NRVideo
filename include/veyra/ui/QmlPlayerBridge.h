@@ -213,6 +213,12 @@ class QmlPlayerBridge : public QObject {
     // enabled, background, state: off|starting|connected|pin|recovering|failed|
     // nopair, message, keepaliveFps (-1 = not yet), pad, gyro, touch}
     Q_PROPERTY(QVariantMap ps5Control READ ps5Control NOTIFY ps5ControlChanged)
+    // PS5 keyboard & mouse (键鼠控制): raw-input capture → virtual controller, merged with the
+    // pad at every 4 ms submission. {available, enabled, captured, rawInput, mode, priority,
+    // active, profiles[{id,label}], profile{name, fields{...}, bindings[...], conflicts[...]},
+    // rebinding, calibration{...}, message}. Live numbers are in ps5KbmStats (250 ms).
+    Q_PROPERTY(QVariantMap ps5Kbm READ ps5Kbm NOTIFY ps5KbmChanged)
+    Q_PROPERTY(QVariantMap ps5KbmStats READ ps5KbmStats NOTIFY ps5KbmStatsChanged)
     // PC streaming (Moonlight / Sunshine): hosts, pairing, apps and stream settings live in
     // `moonlight` (null when the build has no Moonlight); capture state and the stats overlay here.
     Q_PROPERTY(QObject* moonlight READ moonlightModel CONSTANT)
@@ -856,6 +862,32 @@ public:
     // key: enabled | background (saved preferences ps5CaptureControl / ps5ControlBackground).
     Q_INVOKABLE void ps5ControlSet(const QString& key, const QVariant& value);
     Q_INVOKABLE void ps5ControlRestart();
+    QVariantMap ps5Kbm() const;
+    QVariantMap ps5KbmStats() const;
+    Q_INVOKABLE void ps5KbmLoad();
+    Q_INVOKABLE void ps5KbmSetEnabled(bool on);
+    Q_INVOKABLE bool ps5KbmCapture(bool on);
+    // mode: 0 controller only, 1 keyboard/mouse only, 2 hybrid; priority: 0 larger, 1 pad, 2 keyboard/mouse.
+    Q_INVOKABLE void ps5KbmSetMode(int mode, int priority);
+    Q_INVOKABLE void ps5KbmSelectProfile(int index);
+    // Field names as in the profile file: mouse.sensitivity, mouse.curve, keys.riseMs, ...
+    Q_INVOKABLE bool ps5KbmSet(const QString& field, const QVariant& value);
+    // binding: {key, modifier, target, behavior, value, repeatHz, radial} (names as in the file format).
+    Q_INVOKABLE bool ps5KbmSetBinding(int index, const QVariantMap& binding);
+    Q_INVOKABLE void ps5KbmAddBinding();
+    Q_INVOKABLE void ps5KbmRemoveBinding(int index);
+    // part: "key" | "modifier". The next keyboard key pressed in Veyra is used.
+    Q_INVOKABLE void ps5KbmRebind(int index, const QString& part);
+    // From the QML capture area: Qt mouse button (Qt::MouseButton) or wheel (1 up, -1 down, 2 right, -2 left).
+    Q_INVOKABLE void ps5KbmRebindMouse(int qtButton, int wheel);
+    Q_INVOKABLE void ps5KbmCancelRebind();
+    // action: new | duplicate | rename(arg) | delete | reset | resetAll
+    Q_INVOKABLE void ps5KbmProfileAction(const QString& action, const QString& arg = {});
+    Q_INVOKABLE bool ps5KbmExport(const QUrl& file, bool allProfiles);
+    Q_INVOKABLE bool ps5KbmImport(const QUrl& file);
+    // action: deadzoneStart | deadzoneMark | turnBegin(value = deflection) | turnMark | turnKeep |
+    // finish | apply | cancel | linearitySlow | linearityFast
+    Q_INVOKABLE void ps5KbmCalibration(const QString& action, double value = 0);
     QString remotePlayHost() const;
     void setRemotePlayHost(const QString& value);
     QString remotePlayPin() const;
@@ -1502,6 +1534,8 @@ signals:
     void nodeAnchorsChanged();
     void ps5Changed();
     void ps5ControlChanged();
+    void ps5KbmChanged();
+    void ps5KbmStatsChanged();
     void moonlightUiChanged();
     void imageBatchChanged();
     void audioDevicesChanged();
@@ -1619,6 +1653,10 @@ private:
     void stopPs5Control();
     bool captureCardLive() const;
     void tickMoonlight();
+    void tickPs5Kbm();
+    void setupPs5Kbm();
+    void savePs5Kbm();
+    bool ps5KbmSessionActive() const;
     void tickXbox();
     void tickPlaylist();
 #ifdef VEYRA_ENABLE_XBOX

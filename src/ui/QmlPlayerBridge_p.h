@@ -92,6 +92,9 @@
 #include "veyra/remoteplay/Discovery.h"
 #include "veyra/remoteplay/ProfileStore.h"
 #include "veyra/source/RemotePlaySource.h"
+#include "veyra/remoteplay/kbm/Calibration.h"
+#include "veyra/remoteplay/kbm/KbmEngine.h"
+#include "veyra/ui/Ps5KbmCapture.h"
 #endif
 #ifdef VEYRA_ENABLE_XBOX
 #include "veyra/ui/XboxModel.h"
@@ -500,6 +503,27 @@ struct QmlPlayerBridge::Impl {
         if (!padUsers) controller.stop();
         else controller.setFollowLastPressed((padUsers & PadPs5Control) != 0);
     }
+    // --- PS5 keyboard & mouse (键鼠控制). The engine is attached to every PS5 session; it
+    // passes the pad through untouched unless the user captured keyboard and mouse.
+    std::shared_ptr<remoteplay::kbm::KbmEngine> kbm = std::make_shared<remoteplay::kbm::KbmEngine>();
+    std::unique_ptr<ui::Ps5KbmCapture> kbmCapture; // after kbm: destroyed (and its thread joined) first
+    bool kbmLoaded = false, kbmEnabled = false, kbmWantCapture = false;
+    QString kbmMessage;
+    QTimer* kbmSaveTimer = nullptr;
+    int kbmStatsTicks = 0;
+    int kbmRebindIndex = -1;
+    QString kbmRebindPart;
+    struct KbmCalibration {
+        QString phase;   // "" | deadzone | turn | linearitySlow | linearityFast
+        remoteplay::kbm::DeadzoneSweep sweep;
+        remoteplay::kbm::TurnRateProbe probe;
+        float deadzone = 0;
+        bool haveDeadzone = false;
+        std::vector<remoteplay::kbm::TurnRateProbe::Sample> samples;
+        std::optional<remoteplay::kbm::CalibrationReport> report;
+        std::int64_t countsAtCapture = 0, slowCounts = 0, fastCounts = 0;
+        QString result;
+    } kbmCal;
 #endif
     std::jthread ps5Worker;                  // last: joined before what it touches
     // --- screen capture ---
