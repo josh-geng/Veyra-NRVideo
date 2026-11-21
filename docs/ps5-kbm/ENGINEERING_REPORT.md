@@ -1,8 +1,9 @@
 # PS5 keyboard & mouse for Veyra — engineering report
 
 Date 2026-11-20 · branch `claude/fervent-lamport-xa6ms2` · base `9c0c535` (main, app version 2.1.9,
-unchanged). **Status: implementation complete for review; NOT a release candidate.** It has not been
-compiled with MSVC, not run on Windows, and not tested against a PS5, GTA VI or an RTX 5080. A release
+unchanged). **Status: implementation complete for review; NOT a release candidate.** The portable engine has
+been built with MSVC and its tests pass on Windows; the Windows-specific capture, bridge and QML
+code has not been compiled with MSVC, and nothing has been tested against a PS5, GTA VI or an RTX 5080. A release
 candidate requires the Windows build and the manual checklist in [MEASUREMENT.md](MEASUREMENT.md).
 
 Companion documents: [ARCHITECTURE](ARCHITECTURE.md) · [USER_GUIDE](USER_GUIDE.md) ·
@@ -96,6 +97,7 @@ Modified: `CMakeLists.txt` (2 source lines), `cmake/VeyraRemotePlay.cmake` (link
 | Engine + tests, GCC 13 Release, `-Wall -Wextra -Wpedantic -Wshadow -Wconversion` | standalone project, `ctest` | 47/47 pass, 0 warnings |
 | Engine + tests, Clang 18 Release | same | 47/47 pass, 0 warnings |
 | Concurrency test, GCC TSan | `veyra_kbm_tests concurrent_producer_consumer` | pass, no races reported |
+| **Engine + tests, MSVC on the user's Windows 11 PC** (2026-11-21) | `cl /nologo /std:c++20 /EHsc /O2 /W4 /permissive- /utf-8` with VS 2026 Build Tools 18.12 Insiders, MSVC 14.52.37025 | **0 warnings, 47/47 pass**, compose 0.47 µs avg / 4.40 µs worst |
 | Engine + tests cross-compiled for Windows | MinGW-w64 GCC 13 (posix), `-static` | builds, 0 warnings; **not executed** (Wine in the container cannot run even a hello-world) |
 | `Ps5KbmCapture.cpp` | MinGW-w64 `-fsyntax-only` with Qt 6.4 headers | 0 errors |
 | `Ps5Kbm.cpp`, `RemotePlay.cpp`, `RemotePlaySessionSource.cpp` | MinGW-w64 `-fsyntax-only`, real include chain, FFmpeg headers, stubs for proprietary SDK headers only | 0 errors in changed code (verified the compiler reaches the code with an injected error) |
@@ -141,8 +143,8 @@ Modified: `CMakeLists.txt` (2 source lines), `cmake/VeyraRemotePlay.cmake` (link
 
 ## 8. Risks
 
-* **MSVC-only issues** (warnings in `/W4`, header differences) — mitigated by warning-clean GCC/Clang
-  builds; `/WX` deliberately not set on the new library until an MSVC build has run.
+* **MSVC-only issues** in the Windows-specific files (capture, bridge, QML glue): the portable engine is
+  warning-clean under MSVC `/W4` (2026-11-21), but those files were only type-checked with MinGW headers.
 * **Raw-input registration conflicts** with other in-process users of mouse/keyboard raw input.
 * **Focus edge cases** (overlays, Game Bar, multi-monitor fullscreen) — several independent release
   paths exist; real-world testing needed.

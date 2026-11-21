@@ -14,9 +14,8 @@ target_compile_features(veyra_remoteplay_kbm PUBLIC cxx_std_20)
 set_target_properties(veyra_remoteplay_kbm PROPERTIES CXX_EXTENSIONS OFF)
 target_link_libraries(veyra_remoteplay_kbm PUBLIC Threads::Threads)
 if(MSVC)
-  # Same /W4 policy as VeyraWarnings.cmake, but not /WX: this module was written and
-  # warning-clean on GCC/Clang (-Wall -Wextra -Wconversion) without an MSVC run yet.
-  target_compile_options(veyra_remoteplay_kbm PRIVATE /W4 /permissive- /Zc:__cplusplus /utf-8)
+  # Same policy as VeyraWarnings.cmake. Warning-clean under MSVC 14.52 /W4 (2026-11-21).
+  target_compile_options(veyra_remoteplay_kbm PRIVATE /W4 /permissive- /Zc:__cplusplus /utf-8 /WX)
 else()
   target_compile_options(veyra_remoteplay_kbm PRIVATE -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wno-sign-conversion)
 endif()

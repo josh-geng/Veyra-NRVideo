@@ -6,6 +6,8 @@
 
 验证（Linux 容器 Xeon 2.1 GHz）：`tests/kbm` 47/47，GCC 13 Debug ASan+UBSan、Release（-Wall -Wextra -Wconversion 0 警告）、Clang 18、TSan 并发用例均通过；compose 平均 0.75–0.82 µs、最坏 16–41 µs（8 kHz 鼠标、4 ms 提交）。MinGW-w64 交叉编译引擎与测试通过但未执行（容器 Wine 无法运行任何程序）；`Ps5KbmCapture.cpp`、`bridge/Ps5Kbm.cpp`、`bridge/RemotePlay.cpp`、`RemotePlaySessionSource.cpp` 以 MinGW 头文件 `-fsyntax-only` 0 错误（注入错误确认编译器到达代码）；QML 由 Qt 6.4 `qmlformat` 解析通过；`extract.py --check` 3149 条、缺失 0、占位符问题 0。新增 GitHub Actions `ps5-kbm-checks`（MSVC+Qt 6.8.3 编译引擎/原始输入垫片并运行测试，Linux 消毒器）。
 
+2026-11-21 用户 Windows 11 实机：VS 2026 Build Tools 18.12 Insiders（MSVC 14.52.37025）`cl /std:c++20 /EHsc /O2 /W4 /permissive- /utf-8` 编译引擎与测试 0 警告，47/47 通过，compose 平均 0.47 µs、最坏 4.40 µs。据此对 `veyra_remoteplay_kbm` 启用 `/WX`。
+
 未验证：MSVC 完整产品构建、既有 Windows 测试与新 `tst_ps5_kbm.qml`、PS5/GTA VI/RTX 5080 实机、端到端延迟。报告与清单：[工程报告](ps5-kbm/ENGINEERING_REPORT.md)、[测量方法与实机清单](ps5-kbm/MEASUREMENT.md)。
 
 ## 2026-11-18 #152 60→30 在游戏不足30帧时送入重复画面（Claude，分支 claude/issue152-halfrate-20261118，未合 main）

@@ -51,7 +51,7 @@ cmake --build <任务build>/kbm
 ctest --test-dir <任务build>/kbm --output-on-failure
 ```
 
-Windows 上加 `-DVEYRA_KBM_CHECK_WIN32_SHIM=ON`（需 Qt 6）同时编译原始输入垫片。`veyra_remoteplay_kbm` 暂未开 `/WX`，首次 MSVC 构建无警告后再开启。
+Windows 上加 `-DVEYRA_KBM_CHECK_WIN32_SHIM=ON`（需 Qt 6）同时编译原始输入垫片。`veyra_remoteplay_kbm` 已在 MSVC 14.52 `/W4` 0 警告后开启 `/WX`（2026-11-21）。
 
 ## 新增外部依赖（#136 / #133）
 

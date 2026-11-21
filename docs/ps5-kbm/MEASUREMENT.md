@@ -27,10 +27,10 @@ submission (8 kHz), three keys held, Release build.
 |---|---|---|
 | CI container, Intel Xeon @ 2.10 GHz, 4 vCPU, Linux, GCC 13 Release | 0.75–0.82 µs | 16–41 µs (VM scheduling) |
 | Same, ASan + UBSan Debug | 8–10 µs | 45–707 µs |
-| **Target PC (Ryzen 7 9800X3D)** | **not measured** | **not measured** |
+| User's Windows 11 PC, MSVC 14.52 (VS 2026 Build Tools 18.12 Insiders), `cl /O2` | 0.47 µs (engine-reported 0.41 µs) | 4.40 µs |
 
-Engineering target "< 1 ms processing per event" is met by three orders of magnitude on the CI host;
-it is not a claim about the target PC until measured there.
+Engineering target "< 1 ms processing per update" is met by more than two orders of magnitude on the
+user's Windows PC (worst case 4.4 µs). This is input translation only, not end-to-end latency.
 
 ## How to measure on the target PC
 
